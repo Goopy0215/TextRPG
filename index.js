@@ -158,6 +158,86 @@ function updatePlayerData() {
 	player.menu = menu
 }
 
+function updateGameData() {
+    health = player.health
+    money = player.money
+    campfire = player.campfire
+    campfirePrice = player.campfirePrice
+    key = player.key
+    relic = player.relic
+    relicPrice = player.relicPrice
+    wolfPelt = player.wolfPelt
+    wolfPeltPrice = player.wolfPeltPrice
+    trollSkin = player.trollSkin
+    trollSkinPrice = player.trollSkinPrice
+    diamond = player.diamond
+    diamondPrice = player.diamondPrice
+    ruby = player.ruby
+    rubyPrice = player.rubyPrice
+    logs = player.logs
+    stone = player.stone
+    RefinedWood = player.RefinedWood
+    deerSkin = player.deerSkin
+    carp = player.carp
+    carpPrice = player.carpPrice
+    cookedCarp = player.cookedCarp
+    cookedCarpPrice = player.cookedCarpPrice
+    largeMB = player.largeMB
+    LMBP = player.LMBP
+    cookedLMB = player.cookedLMB
+    cookedLMBPrice = player.cookedLMBPrice
+    Bass = player.Bass
+    BassPrice = player.BassPrice
+    cookedBass = player.cookedBass
+    cookedBassPrice = player.cookedBassPrice
+    CatFish = player.CatFish
+    CatFishPrice = player.CatFishPrice
+    cookedCF = player.cookedCF
+    cookedCFPrice = player.cookedCFPrice
+    deerSkinPrice = player.deerSkinPrice
+    bearPelt = player.bearPelt
+    bearPeltPrice = player.bearPeltPrice
+    pickaxes = player.pickaxes
+    sword = player.sword
+    gun = player.gun
+    gunPrice = player.gunPrice
+    rod = player.rod
+    rodPrice = player.rodPrice
+    shield = player.shield
+    shieldPrice = player.shieldPrice
+    logPlus = player.logPlus
+    stonePlus = player.stonePlus
+    RefinedWoodPlus = player.RefinedWoodPlus
+    autologPlus = player.autologPlus
+    autoStonePlus = player.autoStonePlus
+    SawMillTime = player.SawMillTime
+    SawMill = player.SawMill
+    SawMillCost = player.SawMillCost
+    SawMillAuto = player.SawMillAuto
+    SawMillAutoPrice = player.SawMillAutoPrice
+    autoChopperPrice = player.autoChopperPrice
+    autoMinerPrice = player.autoMinerPrice
+    pickaxePrice = player.pickaxePrice
+    RefinedWoodPrice = player.RefinedWoodPrice
+    stonePrice = player.stonePrice
+    logPrice = player.logPrice
+    AutoSawMill = player.AutoSawMill
+    barTender = player.barTender
+    drink = player.drink
+    drinkPlus = player.drinkPlus
+    steak = player.steak
+    steakPlus = player.steakPlus
+    steaks = player.steaks
+    drinkPrice = player.drinkPrice
+    steakPrice = player.steakPrice
+    bet10Price = player.bet10Price
+    bet50Price = player.bet50Price
+    bet100Price = player.bet100Price
+    bet1000Price = player.bet1000Price
+    dogAttack = player.dogAttack
+    menu = player.menu
+}
+
 //health function
 setInterval(function () {
 	if (health > 100) {
@@ -3288,8 +3368,11 @@ function save() {
 
 /* LOAD PREVIOUS game */
 function loadGame() {
-alert("You loaded the game.");
-player = JSON.parse(localStorage.getItem("save"));
-console.log(player); 
-initGame();
+    alert("You loaded the game.");
+    
+    player = JSON.parse(localStorage.getItem("save"));
+    console.log(player); 
+    
+    updateGameData()
+    // initGame();
 };
