@@ -1,81 +1,163 @@
-var health = 100;
-var money = 0;
-var campfire = 0;
-var campfirePrice= 100;
-var key = 0;
-var relic = 0;
-var relicPrice = 1000;
-var wolfPelt = 0;
-var wolfPeltPrice = 100;
-var trollSkin = 0;
-var trollSkinPrice = 750;
-var diamond = 0;
-var diamondPrice = 1000;
-var ruby = 0;
-var rubyPrice = 1000;
-var logs = 0;
-var stone = 0;
-var RefinedWood = 0;
-var deerSkin = 0;
-var carp = 0;
-var carpPrice = 10;
-var cookedCarp = 0;
-var cookedCarpPrice = 40;
-var largeMB = 0;
-var LMBP = 50;
-var cookedLMB = 0;
-var cookedLMBPrice = 250;
-var Bass = 0;
-var BassPrice = 5;
-var cookedBass = 0;
-var cookedBassPrice =20;
-var CatFish = 0;
-var CatFishPrice = 25;
-var cookedCF = 0;
-var cookedCFPrice = 100;
-var deerSkinPrice = 50;
-var bearPelt = 0;
-var bearPeltPrice = 250;
-var pickaxes = 0;
-var sword = 0;
-var gun = 0;
-var gunPrice = 500;
-var rod = 0;
-var rodPrice = 750;
-var shield = 0;
-var shieldPrice = 200;
-var logPlus = 1;
-var stonePlus = 1;
-var RefinedWoodPlus = 1;
-var autologPlus = 0;
-var autoStonePlus = 0;
-var SawMillTime = 0;
-var SawMill = 0;
-var SawMillCost = 250;
-var SawMillAuto = 0;
-var SawMillAutoPrice = 100;
-var autoChopperPrice = 150;
-var autoMinerPrice = 350;
-var pickaxePrice = 100;
-var RefinedWoodPrice = 5;
-var stonePrice = 3;
-var logPrice = 1;
-var AutoSawMill = 0;
-var barTender = 0;
-var drink = 0;
-var drinkPlus = 20;
-var steak = 0;
-var steakPlus = 40;
-var steaks = 0;
-var drinkPrice = 25;
-var steakPrice = 40;
-var bet10Price = 10;
-var bet50Price = 50;
-var bet100Price = 100;
-var bet1000Price = 1000;
-var dogAttack = 40;
-var campfire = 0;
-var menu;
+let health = 100;
+let money = 0;
+let campfire = 0;
+let campfirePrice= 100;
+let key = 0;
+let relic = 0;
+let relicPrice = 1000;
+let wolfPelt = 0;
+let wolfPeltPrice = 100;
+let trollSkin = 0;
+let trollSkinPrice = 750;
+let diamond = 0;
+let diamondPrice = 1000;
+let ruby = 0;
+let rubyPrice = 1000;
+let logs = 0;
+let stone = 0;
+let RefinedWood = 0;
+let deerSkin = 0;
+let carp = 0;
+let carpPrice = 10;
+let cookedCarp = 0;
+let cookedCarpPrice = 40;
+let largeMB = 0;
+let LMBP = 50;
+let cookedLMB = 0;
+let cookedLMBPrice = 250;
+let Bass = 0;
+let BassPrice = 5;
+let cookedBass = 0;
+let cookedBassPrice =20;
+let CatFish = 0;
+let CatFishPrice = 25;
+let cookedCF = 0;
+let cookedCFPrice = 100;
+let deerSkinPrice = 50;
+let bearPelt = 0;
+let bearPeltPrice = 250;
+let pickaxes = 0;
+let sword = 0;
+let gun = 0;
+let gunPrice = 500;
+let rod = 0;
+let rodPrice = 750;
+let shield = 0;
+let shieldPrice = 200;
+let logPlus = 1;
+let stonePlus = 1;
+let RefinedWoodPlus = 1;
+let autologPlus = 0;
+let autoStonePlus = 0;
+let SawMillTime = 0;
+let SawMill = 0;
+let SawMillCost = 250;
+let SawMillAuto = 0;
+let SawMillAutoPrice = 100;
+let autoChopperPrice = 150;
+let autoMinerPrice = 350;
+let pickaxePrice = 100;
+let RefinedWoodPrice = 5;
+let stonePrice = 3;
+let logPrice = 1;
+let AutoSawMill = 0;
+let barTender = 0;
+let drink = 0;
+let drinkPlus = 20;
+let steak = 0;
+let steakPlus = 40;
+let steaks = 0;
+let drinkPrice = 25;
+let steakPrice = 40;
+let bet10Price = 10;
+let bet50Price = 50;
+let bet100Price = 100;
+let bet1000Price = 1000;
+let dogAttack = 40;
+let menu;
+
+let player = {}
+
+function updatePlayerData() {
+    player.health = health
+    player.money = money
+    player.campfire = campfire
+    player.campfirePrice = campfirePrice
+    player.key = key
+    player.relicPrice = relicPrice
+    player.wolfPelt = wolfPelt
+    player.wolfPeltPrice = wolfPeltPrice
+    player.trollSkin = trollSkin
+    player.trollSkinPrice = trollSkinPrice
+    player.diamond = diamond
+    player.diamondPrice = diamondPrice
+    player.ruby = ruby
+    player.rubyPrice = rubyPrice
+    player.logs = logs
+    player.stone = stone
+    player.RefinedWood = RefinedWood
+    player.deerSkin = deerSkin
+    player.carp = carp
+    player.carpPrice = carpPrice
+    player.cookedCarp = cookedCarp
+    player.cookedCarpPrice = cookedCarpPrice
+    player.largeMB = largeMB
+    player.LMBP = LMBP
+    player.cookedLMB = cookedLMB
+    player.cookedLMBPrice = cookedLMBPrice
+    player.Bass = Bass
+    player.BassPrice = BassPrice
+    player.cookedBass = cookedBass
+    player.cookedBassPrice = cookedBassPrice
+    player.CatFish = CatFish
+    player.CatFishPrice = CatFishPrice
+    player.cookedCF = cookedCF
+    player.cookedCFPrice = cookedCFPrice
+    player.deerSkinPrice = deerSkinPrice
+    player.bearPelt = bearPelt
+    player.bearPeltPrice = bearPeltPrice
+    player.pickaxes = pickaxes
+    player.sword = sword
+    player.gun = gun
+    player.gunPrice = gunPrice
+    player.rod = rod
+    player.rodPrice = rodPrice
+    player.shield = shield
+    player.shieldPrice = shieldPrice
+    player.logPlus = logPlus
+    player.stonePlus = stonePlus
+    player.RefinedWoodPlus = RefinedWoodPlus
+    player.autologPlus = autologPlus
+    player.autoStonePlus = autoStonePlus
+    player.SawMillTime = SawMillTime
+    player.SawMill = SawMill
+    player.SawMillCost = SawMillCost
+    player.SawMillAuto = SawMillAuto
+    player.SawMillAutoPrice = SawMillAutoPrice
+    player.autoChopperPrice = autoChopperPrice
+    player.autoMinerPrice = autoMinerPrice
+    player.pickaxePrice = pickaxePrice
+    player.RefinedWoodPrice = RefinedWoodPrice
+    player.stonePrice = stonePrice
+    player.logPrice = logPrice
+    player.AutoSawMill = AutoSawMill
+    player.barTender = barTender
+    player.drink = drink
+    player.drinkPlus = drinkPlus
+    player.steak = steak
+    player.steakPlus = steakPlus
+    player.steaks = steaks
+    player.drinkPrice = drinkPrice
+    player.steakPrice = steakPrice
+    player.bet10Price = bet10Price
+    player.bet50Price = bet50Price
+    player.bet100Price = bet100Price
+    player.bet1000Price = bet1000Price
+    player.dogAttack = dogAttack
+    player.campfire = campfire
+    player.menu = menu
+}
+
 
 //health function
 setInterval(function(){
@@ -113,6 +195,7 @@ setInterval(function(){
     changeInventory();
     changeMarket();
 }, 1000);
+
 //function for autolog
 setInterval(function(){
     logs += autologPlus;
@@ -1964,7 +2047,7 @@ function changeInventory(){
 $("#Sugma").html("Health: " + health);
 
 if(health <= 0){
-    var alerted = localStorage.getItem('alerted') || '';
+    let alerted = localStorage.getItem('alerted') || '';
     if (alerted != 'yes') {
      alert("Game Over!");
      localStorage.setItem('alerted','yes');
@@ -2665,8 +2748,8 @@ chopTime -= 1;
 });
 
 
-var chopTime = 0;
-var mineTime = 0;
+let chopTime = 0;
+let mineTime = 0;
 
 $("#mineStone").click(function(){
 if(pickaxes == 0){
@@ -2764,7 +2847,7 @@ if(logs <= 0){
     }
 
     function easterAlert(){
-        var alerted = localStorage.getItem('alerted') || '';
+        let alerted = localStorage.getItem('alerted') || '';
         if (alerted != 'yes') {
          alert("SK did it first!!");
          localStorage.setItem('alerted','yes');
@@ -3208,7 +3291,7 @@ mineTime++;
             }
     };
 //dialogue
-var dungKnow = 0;
+let dungKnow = 0;
     $("#dialogue").click(function(){
         alert("You can see what ive got.")
     });
@@ -3228,85 +3311,7 @@ var dungKnow = 0;
 
 
 
-    var player = {
-        var: health = 100,
-        var: money = 0,
-        var: campfire = 0,
-        var: campfirePrice= 100,
-        var: key = 0,
-        var: relicPrice = 1000,
-        var: wolfPelt = 0,
-        var: wolfPeltPrice = 100,
-        var: trollSkin = 0,
-        var: trollSkinPrice = 750,
-        var: diamond = 0,
-        var: diamondPrice = 1000,
-        var: ruby = 0,
-        var: rubyPrice = 1000,
-        var: logs = 0,
-        var: stone = 0,
-        var: RefinedWood = 0,
-        var: deerSkin = 0,
-        var: carp = 0,
-        var: carpPrice = 10,
-        var: cookedCarp = 0,
-        var: cookedCarpPrice = 40,
-        var: largeMB = 0,
-        var: LMBP = 50,
-        var: cookedLMB = 0,
-        var: cookedLMBPrice = 250,
-        var: Bass = 0,
-        var: BassPrice = 5,
-        var: cookedBass = 0,
-        var: cookedBassPrice =20,
-        var: CatFish = 0,
-        var: CatFishPrice = 25,
-        var: cookedCF = 0,
-        var: cookedCFPrice = 100,
-        var: deerSkinPrice = 50,
-        var: bearPelt = 0,
-        var: bearPeltPrice = 250,
-        var: pickaxes = 0,
-        var: sword = 0,
-        var: gun = 0,
-        var: gunPrice = 500,
-        var: rod = 0,
-        var: rodPrice = 750,
-        var: shield = 0,
-        var: shieldPrice = 200,
-        var: logPlus = 1,
-        var: stonePlus = 1,
-        var: RefinedWoodPlus = 1,
-        var: autologPlus = 0,
-        var: autoStonePlus = 0,
-        var: SawMillTime = 0,
-        var: SawMill = 0,
-        var: SawMillCost = 250,
-        var: SawMillAuto = 0,
-        var: SawMillAutoPrice = 100,
-        var: autoChopperPrice = 150,
-        var: autoMinerPrice = 350,
-        var: pickaxePrice = 100,
-        var: RefinedWoodPrice = 5,
-        var: stonePrice = 3,
-        var: logPrice = 1,
-        var: AutoSawMill = 0,
-        var: barTender = 0,
-        var: drink = 0,
-        var: drinkPlus = 20,
-        var: steak = 0,
-        var: steakPlus = 40,
-        var: steaks = 0,
-        var: drinkPrice = 25,
-        var: steakPrice = 40,
-        var: bet10Price = 10,
-        var: bet50Price = 50,
-        var: bet100Price = 100,
-        var: bet1000Price = 1000,
-        var: dogAttack = 40,
-        var: campfire = 0,
-        var: menu,
-    };
+
 
 
 $("#save").click(function(){
@@ -3324,7 +3329,7 @@ loadGame();
 /* SETUP A SAVE STATE */
 function save() {
     // Using cookie method. problems with localstorage.
-    var d = new Date; // other possible future date:
+    let d = new Date; // other possible future date:
     d.setTime(d.getTime() + 10 * 365 * 24 * 60 * 60); // 2038 :-)
     document.cookie = "save" + "=" + JSON.stringify(player) + ";path=/;expires" + d.toGMTString();
 }// FUNCTION: SAVE GAME
@@ -3332,11 +3337,11 @@ function save() {
 /* LOAD PREVIOUS game */
 function loadGame() {
     // Split cookie string and get all individual name=value pairs in an array
-    var cookieArr = document.cookie.split(";");
+    let cookieArr = document.cookie.split(";");
 
     // Loop through the array elements
-    for(var i = 0; i < cookieArr.length; i++) {
-            var cookiePair = cookieArr[i].split("=");
+    for(let i = 0; i < cookieArr.length; i++) {
+            let cookiePair = cookieArr[i].split("=");
 
             /* Removing whitespace at the beginning of the cookie name
             and compare it with the given string */
