@@ -2089,7 +2089,7 @@ $('#campfire1').click(function () {
 
 $('#return').click(function () {
     let diceRoll = Math.random()
-    if(diceRoll < 0.1){
+    if(diceRoll < 0.01){
         alert('You have been robbed')
         menu = switchMenu('encounter3')
     }else{
