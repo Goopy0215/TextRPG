@@ -2730,13 +2730,6 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
-	//refine wood
-	if (SawMill > 0) {
-		$('#sawMill').css('display', 'block')
-	} else {
-		$('#sawMill').css('display', 'none')
-	}
-
 	if (pickaxes > 0) {
 		$('#mineStone').css('display', 'block')
 	} else {
