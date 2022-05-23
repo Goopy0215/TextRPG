@@ -3406,3 +3406,13 @@ function saveAuto() {
             alert("Cannot access localStorage - browser may be old or storage may be corrupt");
     }
 };
+
+if(menu = switchMenu('main')){
+    let diceRoll = Math.random()
+    if(diceRoll < 0.1){
+        alert('You have been robbed')
+        menu = switchMenu('encounter3')
+    }else{
+        menu = switchMenu('main')
+    }
+}
