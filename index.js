@@ -2259,11 +2259,11 @@ function changeInventory() {
 	}
 
     if (potion == 1) {
-		$('#potion1').html('You own ' + potion + ' Potion. ')
+		$('#potion1').css('You own ' + potion + ' Potion. ')
 	} else if (potion > 1) {
-		$('#potion1').html('You own ' + potion + ' Potions. ')
+		$('#potion1').css('You own ' + potion + ' Potions. ')
 	} else {
-		$('#potion1').html('')
+		$('#potion1').css('')
 	}
 
 	if (shield == 1) {
