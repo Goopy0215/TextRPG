@@ -1358,71 +1358,47 @@ $('#dungeon').click(function () {
 })
 
 $('#room1').click(function () {
-	if (Math.random() < 0.5) {
-		menu = switchMenu('dungeon1')
-	} else {
-		RandomRoom()
-	}
+    let diceRoll = Math.random() * 8
+    if (diceRoll < 1) {
+        randomRoom()
+    } else if (diceRoll < 2) {
+        randomRoom2()
+    } else if (diceRoll < 3) {
+        randomRoom()
+    } else if (diceRoll < 4) {
+        randomRoom2()
+    } else if (diceRoll < 5) {
+        randomRoom()
+    } else if (diceRoll < 6) {
+        randomRoom2()
+    } else if (diceRoll < 7) {
+        randomRoom()
+    } else if (diceRoll < 8) {
+        randomRoom2()
+    }
 	changeInventory()
 	changeMarket()
 })
 
 $('#room2').click(function () {
-	if (Math.random() < 0.5) {
 		let diceRoll = Math.random() * 8
 		if (diceRoll < 1) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
+            randomRoom()
 		} else if (diceRoll < 2) {
-			alert('You enter the next room and theres chest sitting in the middle of it.')
-			menu = switchMenu('dungeon6')
+            randomRoom2()
 		} else if (diceRoll < 3) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
+            randomRoom()
 		} else if (diceRoll < 4) {
-			alert('You enter the next room to see a potion sitting in the middle of it.')
-			menu = switchMenu('dungeon5')
+            randomRoom2()
 		} else if (diceRoll < 5) {
-			alert('You enter the next room and theres chest sitting in the middle of it.')
-			menu = switchMenu('dungeon6')
+            randomRoom()
 		} else if (diceRoll < 6) {
-            alert('You enter the next room and theres a door with a keyhole.')
-            menu = switchMenu('dungeon7')
+            randomRoom2()
 		} else if (diceRoll < 7) {
-			alert('You enter the next room to see a potion sitting in the middle of it.')
-			menu = switchMenu('dungeon5')
+            randomRoom()
 		} else if (diceRoll < 8) {
-			alert('You enter a room with a chest and what looks to be an exit.')
-			menu = switchMenu('dungeonEnd')
+            randomRoom2()
 		}
-	} else {
-		let diceRoll = Math.random() * 8
-		if (diceRoll < 1) {
-			alert('You enter the next room and theres a empty doorway in the middle of it.')
-			menu = switchMenu('dungeon4')
-		} else if (diceRoll < 2) {
-			alert('You enter the next room and theres chest sitting in the middle of it.')
-			menu = switchMenu('dungeon6')
-		} else if (diceRoll < 3) {
-            alert('You enter the next room and theres a door with a keyhole.')
-            menu = switchMenu('dungeon7')
-		} else if (diceRoll < 4) {
-			alert('You enter the next room to see a potion sitting in the middle of it.')
-			menu = switchMenu('dungeon5')
-		} else if (diceRoll < 5) {
-			alert('You enter the next room and theres chest sitting in the middle of it.')
-			menu = switchMenu('dungeon6')
-		} else if (diceRoll < 6) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
-		} else if (diceRoll < 7) {
-			alert('You enter the next room to see a potion sitting in the middle of it.')
-			menu = switchMenu('dungeon5')
-		} else if (diceRoll < 8) {
-			alert('You enter the next room and theres a empty doorway in the middle of it.')
-			menu = switchMenu('dungeon4')
-		}
-	}
 	changeInventory()
 	changeMarket()
 })
@@ -2897,7 +2873,7 @@ $('#sawMill').click(function () {
 
 $('#return2').click(function () {
     let diceRoll = Math.random()
-    if(diceRoll < 0.1){
+    if(diceRoll < 0.05){
         alert('You have been robbed')
         menu = switchMenu('encounter3')
     }else{
@@ -2954,11 +2930,41 @@ function RandomRoom() {
 		alert('You enter the next room to see a potion sitting in the middle of it.')
 		menu = switchMenu('dungeon5')
 	} else if (diceRoll < 8) {
-		bar
 		alert('You enter the next room and theres a empty doorway in the middle of it.')
 		menu = switchMenu('dungeon4')
 	}
 }
+
+function RandomRoom2() {
+	let diceRoll = Math.random()
+	if (diceRoll < 0.1) {
+        alert('You enter a room with a chest and what looks to be an exit.')
+        menu = switchMenu('dungeonEnd')
+	} else if (diceRoll < 0.15) {
+        alert('You enter the next room and theres a door with a keyhole.')
+        menu = switchMenu('dungeon7')
+	} else if (diceRoll < 0.25) {
+		alert('You enter the next room and theres chest sitting in the middle of it.')
+		menu = switchMenu('dungeon6')
+	} else if (diceRoll < 0.35) {
+		alert('You enter the next room to see a potion sitting in the middle of it.')
+		menu = switchMenu('dungeon5')
+	} else if (diceRoll < 0.45) {
+		alert('You enter the next room and theres a troll waiting for you!')
+		menu = switchMenu('dungeon3')
+	} else if (diceRoll < 0.50) {
+		alert('You enter the next room and theres a empty doorway in the middle of it.')
+		menu = switchMenu('dungeon4')
+	} else if (diceRoll < 0.75) {
+        alert('You enter the next room and theres two ways to go.')
+        menu = switchMenu('dungeon1')
+	} else {
+        alert('You enter the next room and theres two ways to go.')
+        menu = switchMenu('dungeon2')
+	}
+}
+
+
 
 function gameOverAlert() {
 	alert('Game Over.')
