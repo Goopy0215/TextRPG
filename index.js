@@ -2737,11 +2737,7 @@ function changeMarket() {
     }
 
 
-	if (pickaxes > 0) {
-		$('#mineStone').css('display', 'block')
-	} else {
-		$('#mineStone').css('display', 'none')
-	}
+
 
 	if (dungKnow > 0) {
 		$('#dungeon').css('display', 'block')
