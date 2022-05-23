@@ -2757,9 +2757,8 @@ function changeMarket() {
 		$('#mineStone').css('display', 'none')
 	}
 
-    if (SawMill == 0) {
-		$('#sawMill').css('display', 'none')
-	} else if (sawTime <= 0) {
+
+    if (sawTime <= 0) {
 		$('#sawMill').css('display', 'block')
 	} else if (sawTime > 0) {
 		$('#sawMill').css('display', 'none')
