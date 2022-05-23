@@ -2222,14 +2222,6 @@ function changeInventory() {
 		$('#rods').html('')
 	}
 
-    if (potion == 1) {
-		$('#potion1').html('You own ' + potion + ' Potion. ')
-	} else if (potion > 1) {
-		$('#potion1').html('You own ' + potion + ' Potions. ')
-	} else {
-		$('#potion1').html('')
-	}
-
 	if (shield == 1) {
 		$('#shield').html('You own ' + shield + ' shield. ')
 	} else if (shield > 1) {
