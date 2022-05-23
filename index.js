@@ -1371,8 +1371,8 @@ $('#room2').click(function () {
 	if (Math.random() < 0.5) {
 		let diceRoll = Math.random() * 8
 		if (diceRoll < 1) {
-			alert('You enter the next room and theres a empty doorway in the middle of it.')
-			menu = switchMenu('dungeon4')
+			alert('You enter the next room and theres a troll waiting for you!')
+			menu = switchMenu('dungeon3')
 		} else if (diceRoll < 2) {
 			alert('You enter the next room and theres chest sitting in the middle of it.')
 			menu = switchMenu('dungeon6')
@@ -1386,8 +1386,8 @@ $('#room2').click(function () {
 			alert('You enter the next room and theres chest sitting in the middle of it.')
 			menu = switchMenu('dungeon6')
 		} else if (diceRoll < 6) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
+            alert('You enter the next room and theres a door with a keyhole.')
+            menu = switchMenu('dungeon7')
 		} else if (diceRoll < 7) {
 			alert('You enter the next room to see a potion sitting in the middle of it.')
 			menu = switchMenu('dungeon5')
@@ -1404,8 +1404,8 @@ $('#room2').click(function () {
 			alert('You enter the next room and theres chest sitting in the middle of it.')
 			menu = switchMenu('dungeon6')
 		} else if (diceRoll < 3) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
+            alert('You enter the next room and theres a door with a keyhole.')
+            menu = switchMenu('dungeon7')
 		} else if (diceRoll < 4) {
 			alert('You enter the next room to see a potion sitting in the middle of it.')
 			menu = switchMenu('dungeon5')
@@ -1921,7 +1921,7 @@ $('#trap').click(function () {
 })
 
 $('#chest1').click(function () {
-	let diceRoll = Math.random() * 4
+	let diceRoll = Math.random() * 8
 	if (diceRoll < 1) {
 		alert('You open the chest and find some gold.')
 		money += 100
@@ -1937,15 +1937,15 @@ $('#chest1').click(function () {
 			menu = switchMenu('dungeon3')
 		}
 	} else if (diceRoll < 2) {
-		alert('You open the chest and it was a trap!')
-		health -= 50
+		alert('You open the chest and find some gold.')
+		money += 100
 		let diceRoll = Math.random() * 3
 		if (diceRoll < 1) {
-			alert('You enter the next room and theres a potion in the middle of it.')
-			menu = switchMenu('dungeon5')
-		} else if (diceRoll < 2) {
 			alert('You enter the next room and theres two ways to go.')
 			menu = switchMenu('dungeon1')
+		} else if (diceRoll < 2) {
+			alert('You enter the next room and theres an empty doorway sitting in the middle of it.')
+			menu = switchMenu('dungeon4')
 		} else if (diceRoll < 3) {
 			alert('You enter the next room and theres a troll waiting for you!')
 			menu = switchMenu('dungeon3')
@@ -1977,6 +1977,62 @@ $('#chest1').click(function () {
 		} else if (diceRoll < 3) {
 			alert('You enter the next room and theres a troll waiting for you!')
 			menu = switchMenu('dungeon3')
+		}
+	} else if (diceRoll < 5) {
+		alert('You open the chest and find some gold.')
+		money += 100
+		let diceRoll = Math.random() * 3
+		if (diceRoll < 1) {
+			alert('You enter the next room and theres two ways to go.')
+			menu = switchMenu('dungeon1')
+		} else if (diceRoll < 2) {
+			alert('You enter the next room and theres an empty doorway sitting in the middle of it.')
+			menu = switchMenu('dungeon4')
+		} else if (diceRoll < 3) {
+			alert('You enter the next room and theres a troll waiting for you!')
+			menu = switchMenu('dungeon3')
+		}
+	} else if (diceRoll < 6) {
+		alert('You open the chest and it was a trap!')
+		health -= 50
+		let diceRoll = Math.random() * 3
+		if (diceRoll < 1) {
+			alert('You enter the next room and theres a potion in the middle of it.')
+			menu = switchMenu('dungeon5')
+		} else if (diceRoll < 2) {
+			alert('You enter the next room and theres two ways to go.')
+			menu = switchMenu('dungeon1')
+		} else if (diceRoll < 3) {
+			alert('You enter the next room and theres a troll waiting for you!')
+			menu = switchMenu('dungeon3')
+		}
+	} else if (diceRoll < 7) {
+		alert('You open the chest and find some gold.')
+		money += 100
+		let diceRoll = Math.random() * 3
+		if (diceRoll < 1) {
+			alert('You enter the next room and theres two ways to go.')
+			menu = switchMenu('dungeon1')
+		} else if (diceRoll < 2) {
+			alert('You enter the next room and theres a door with a keyhole.')
+			menu = switchMenu('dungeon7')
+		} else if (diceRoll < 3) {
+			alert('You enter the next room and theres a troll waiting for you!')
+			menu = switchMenu('dungeon3')
+		}
+	} else if (diceRoll < 8) {
+		alert('You open the chest and find a shield.')
+		shield++
+		let diceRoll = Math.random() * 3
+		if (diceRoll < 1) {
+			alert('You enter a room with a chest and what looks to be an exit.')
+			menu = switchMenu('dungeonEnd')
+		} else if (diceRoll < 2) {
+			alert('You enter the next room and theres two ways to go.')
+			menu = switchMenu('dungeon2')
+		} else if (diceRoll < 3) {
+			alert('You enter the next room and theres an empty doorway sitting in the middle of it.')
+			menu = switchMenu('dungeon4')
 		}
 	}
 	changeInventory()
