@@ -2086,7 +2086,13 @@ $('#campfire1').click(function () {
 })
 
 $('#return').click(function () {
-	menu = switchMenu('main')
+    let diceRoll = Math.random()
+    if(diceRoll < 0.1){
+        alert('You have been robbed')
+        menu = switchMenu('encounter3')
+    }else{
+        menu = switchMenu('main')
+    }
 })
 
 function gameOver() {
@@ -2826,7 +2832,13 @@ $('#sawMill').click(function () {
 })
 
 $('#return2').click(function () {
-	menu = switchMenu('main')
+    let diceRoll = Math.random()
+    if(diceRoll < 0.1){
+        alert('You have been robbed')
+        menu = switchMenu('encounter3')
+    }else{
+        menu = switchMenu('main')
+    }
 })
 
 $('#return3').click(function () {
@@ -3407,12 +3419,12 @@ function saveAuto() {
     }
 };
 
-if(menu = switchMenu('main')){
-    let diceRoll = Math.random()
-    if(diceRoll < 0.1){
-        alert('You have been robbed')
-        menu = switchMenu('encounter3')
-    }else{
-        menu = switchMenu('main')
-    }
-}
+// if(menu = ('main')){
+//     let diceRoll = Math.random()
+//     if(diceRoll < 0.1){
+//         alert('You have been robbed')
+//         menu = switchMenu('encounter3')
+//     }else{
+//         menu = switchMenu('main')
+//     }
+// }
