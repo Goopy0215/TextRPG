@@ -7,6 +7,7 @@
 
 .marketPlace {
     display: none;
+    padding-top: 8px;
 }
 
 
@@ -89,24 +90,28 @@
     position: fixed; top: 0px;
     display: grid;
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .sellButtons2{
     position: fixed; top: 0px; right: 1120px;
     display: grid;
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .sellButtons3{
     position: fixed; top: 0px; right: 870px;
     display: grid;
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .sellButtons4{
     position: fixed; top: 0px; right: 495px;
     display: grid;
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .tavern {
@@ -239,6 +244,7 @@ button{
     grid-template-columns: subgrid;
     background-color: white;
     font-size: 18px;
+    margin: 4px;
 }
 
 .cookedMeat {
