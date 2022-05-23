@@ -2755,11 +2755,7 @@ function changeMarket() {
 		$('#potion1').css('display', 'none')
 	}
 
-    if (money >= potionPrice) {
-		$('#potion1').css('display', 'block')
-	} else {
-		$('#potion1').css('display', 'none')
-	}
+
 
     if(SawMill > 0){
         $('#sawMill').css('display', 'block')
