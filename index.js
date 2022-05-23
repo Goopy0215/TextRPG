@@ -1314,6 +1314,30 @@ $('#banditRun').click(function () {
 	changeMarket()
 })
 
+
+
+$('#banditflee').click(function () {
+	if (Math.random() < 0.5) {
+			alert('You got away from the bandits.')
+			health -= 0
+	} else if (Math.random() < 0.5) {
+			alert('The bandits caught up and took some of your gold and roughed you up.')
+			health -= 25
+            money -= 100
+	} else {
+        if(shields >= 1){
+            alert('The bandits hit your shield with an arrow but you got away.')
+        }else{
+            alert('The bandits hit you with an arrow but you got away.')
+			health -= 50
+        }
+	}
+	menu = switchMenu('main')
+	changeInventory()
+	changeMarket()
+})
+
+
 //other stuff
 $('#visit2').click(function () {
 	menu = switchMenu('tavern')
