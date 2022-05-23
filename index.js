@@ -2740,12 +2740,6 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
-    if (money >= potionPrice) {
-		$('#potion2').css('display', 'block')
-	} else {
-		$('#potion2').css('display', 'none')
-	}
-
 
 
     if(SawMill > 0){
