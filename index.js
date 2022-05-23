@@ -2763,6 +2763,15 @@ function changeMarket() {
 	} else if (mineTime > 0) {
 		$('#mineStone').css('display', 'none')
 	}
+
+    if (SawMill == 0) {
+		$('#sawMill').css('display', 'none')
+	} else if (sawTime <= 0) {
+		$('#sawMill').css('display', 'block')
+	} else if (sawTime > 0) {
+		$('#sawMill').css('display', 'none')
+	}
+
 }
 //menu swapper
 function switchMenu(menu) {
@@ -2783,6 +2792,7 @@ $('#chop').click(function () {
 
 let chopTime = 0
 let mineTime = 0
+let sawTime = 0
 
 $('#mineStone').click(function () {
 	if (pickaxes == 0) {
@@ -2806,6 +2816,8 @@ $('#sawMill').click(function () {
 		RefinedWood++
 		changeInventory()
 		changeMarket()
+        setTimeout(5000)
+        sawTime -= 1
 	}
 })
 
