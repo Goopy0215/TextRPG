@@ -2072,7 +2072,8 @@ function changeInventory() {
 			alert('Game Over!')
 			localStorage.setItem('alerted', 'yes')
 		}
-		gameOver()
+		gameOver();
+        clearSave();
 	}
 
 	if (money >= 1000000) {
@@ -3376,3 +3377,7 @@ function loadGame() {
     updateGameData()
     // initGame();
 };
+
+function clearSave() {
+    localStorage.clear();
+}
