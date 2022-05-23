@@ -2360,12 +2360,12 @@ function changeInventory() {
 		$('#cook10LMB').css('display', 'none')
 	}
 
-	if (campfire <= 0) {
+	if (logs <= 0) {
 		$('#campFire').css('display', 'block')
 	} else {
 		$('#campFire').css('display', 'none')
 	}
-	if (logs > 1) {
+	if (logs > campfirePrice) {
 		$('#campFire').css('display', 'block')
 	} else {
 		$('#campFire').css('display', 'none')
