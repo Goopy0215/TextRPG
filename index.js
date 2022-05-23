@@ -1360,21 +1360,21 @@ $('#dungeon').click(function () {
 $('#room1').click(function () {
     let diceRoll = Math.random() * 8
     if (diceRoll < 1) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 2) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 3) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 4) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 5) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 6) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 7) {
-        randomRoom()
+        RandomRoom()
     } else if (diceRoll < 8) {
-        randomRoom2()
+        RandomRoom2()
     }
 	changeInventory()
 	changeMarket()
@@ -1383,21 +1383,21 @@ $('#room1').click(function () {
 $('#room2').click(function () {
 		let diceRoll = Math.random() * 8
 		if (diceRoll < 1) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 2) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 3) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 4) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 5) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 6) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 7) {
-            randomRoom()
+            RandomRoom()
 		} else if (diceRoll < 8) {
-            randomRoom2()
+            RandomRoom2()
 		}
 	changeInventory()
 	changeMarket()
