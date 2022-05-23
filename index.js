@@ -2768,7 +2768,11 @@ function changeMarket() {
 
     if(pickaxes == 0){
         $("#mineStone").css("display", "none")
-    }else if(mineTime <= 0){
+    }else{
+        $("#mineStone").css("display", "block")
+    }
+    
+    if(mineTime <= 0){
         $("#mineStone").prop("disabled", false)
     }else if(mineTime > 0){
         $("#mineStone").prop("disabled", true)
@@ -2776,7 +2780,11 @@ function changeMarket() {
 
 if (SawMill == 0){
     $('sawMill').css('display', 'none')
-}else if (sawTime <= 0) {
+    }else{
+        $('sawMill').css('display', 'block')
+    }
+
+ if (sawTime <= 0) {
 		$('#sawMill').prop('disabled', false)
 	} else if (sawTime > 0) {
 		$('#sawMill').prop('disabled', true)
