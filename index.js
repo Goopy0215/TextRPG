@@ -917,6 +917,7 @@ $('#bet10').click(function () {
 		alert('You have lost the bet!')
 		money -= bet10Price
 	}
+    saveAuto()
 })
 
 $('#bet50').click(function () {
@@ -929,6 +930,7 @@ $('#bet50').click(function () {
 		alert('You have lost the bet!')
 		money -= bet50Price
 	}
+    saveAuto()
 })
 
 $('#bet100').click(function () {
@@ -941,6 +943,7 @@ $('#bet100').click(function () {
 		alert('You have lost the bet!')
 		money -= bet100Price
 	}
+    saveAuto()
 })
 
 $('#bet1000').click(function () {
@@ -953,6 +956,7 @@ $('#bet1000').click(function () {
 		alert('You have lost the bet!')
 		money -= bet1000Price
 	}
+    saveAuto()
 })
 
 $('#betAll').click(function () {
@@ -965,6 +969,7 @@ $('#betAll').click(function () {
 		alert('You have lost the bet!')
 		money -= money
 	}
+    saveAuto()
 })
 
 function gamble50() {
@@ -3363,31 +3368,6 @@ $('#load2').click(function () {
 	loadGame()
 })
 
-/* SETUP A SAVE STATE */
-function save() {
-    
-
-} // FUNCTION: SAVE GAME
-
-/* LOAD PREVIOUS game */
-function loadGame() {
-	// Split cookie string and get all individual name=value pairs in an array
-	let cookieArr = document.cookie.split(';')
-
-	// Loop through the array elements
-	for (let i = 0; i < cookieArr.length; i++) {
-		let cookiePair = cookieArr[i].split('=')
-
-		/* Removing whitespace at the beginning of the cookie name
-            and compare it with the given string */
-		if ('save' == cookiePair[0].trim()) {
-			// Decode the cookie value and return
-			player = JSON.parse(cookiePair[1])
-		}
-	}
-	console.log(player.money)
-}
-
 
 /* SETUP A SAVE STATE */
 function save() {
@@ -3416,3 +3396,13 @@ function loadGame() {
 function clearSave() {
     localStorage.clear();
 }
+
+function saveAuto() {
+    updatePlayerData()
+    // TRY TO SAVE THE GAME
+    try {
+        localStorage.setItem("save",JSON.stringify(player));
+    }catch(err) {
+            alert("Cannot access localStorage - browser may be old or storage may be corrupt");
+    }
+};
