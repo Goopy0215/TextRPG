@@ -2815,26 +2815,34 @@ function changeMarket() {
 
 	//chop time
     if (chopTime <=0) {
-        $("#chop").prop("disabled",false);
+        $("#chop").prop("disabled",false)
       } else {
-        $("#chop").prop("disabled",true);
+        $("#chop").prop("disabled",true)
       }
 
     if(pickaxes == 0){
-        $("#mineStone").css("display", "none");
+        $("#mineStone").css("display", "none")
     }else if(mineTime <= 0){
-        $("#mineStone").prop("disabled", false);
+        $("#mineStone").prop("disabled", false)
     }else if(mineTime > 0){
-        $("#mineStone").prop("disabled", true);
+        $("#mineStone").prop("disabled", true)
     };
 
+
+    if(pickaxes == 0){
+        $("#mineStone").css("display", "none")
+    }else if(mineTime <= 0){
+        $("#mineStone").prop("disabled", false)
+    }else if(mineTime > 0){
+        $("#mineStone").prop("disabled", true)
+    };
 
 if (SawMill == 0){
     $('sawMill').css('display', 'none')
 }else if (sawTime <= 0) {
-		$('#sawMill').css('display', 'block')
+		$('#sawMill').prop('disabled', false)
 	} else if (sawTime > 0) {
-		$('#sawMill').css('display', 'none')
+		$('#sawMill').prop('disabled', true)
 	}
 
 }
