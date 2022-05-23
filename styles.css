@@ -9,6 +9,12 @@
     display: none;
 }
 
+.consumables {
+    position: fixed; bottom: 0px; right: 1400px;
+    font-size: 21px;
+
+}
+
 
 
 .door1 {

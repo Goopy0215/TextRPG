@@ -44,6 +44,8 @@ let rod = 0
 let rodPrice = 750
 let shield = 0
 let shieldPrice = 200
+let potion = 0
+let potionPrice = 1000
 let logPlus = 1
 let stonePlus = 1
 let RefinedWoodPlus = 1
@@ -124,6 +126,8 @@ function updatePlayerData() {
 	player.rodPrice = rodPrice
 	player.shield = shield
 	player.shieldPrice = shieldPrice
+    player.potion = potion
+	player.potionPrice = potionPrice
 	player.logPlus = logPlus
 	player.stonePlus = stonePlus
 	player.RefinedWoodPlus = RefinedWoodPlus
@@ -205,6 +209,8 @@ function updateGameData() {
     rodPrice = player.rodPrice
     shield = player.shield
     shieldPrice = player.shieldPrice
+    potion = player.potion
+    potionPrice = player.potionPrice
     logPlus = player.logPlus
     stonePlus = player.stonePlus
     RefinedWoodPlus = player.RefinedWoodPlus
@@ -822,6 +828,17 @@ $('#buyShield').click(function () {
 	} else {
 		money -= shieldPrice
 		shield++
+		changeInventory()
+		changeMarket()
+	}
+})
+
+$('#potion1').click(function () {
+	if (money < potionPrice) {
+		alert("You don't have enough.")
+	} else {
+		money -= potionPrice
+		potion++
 		changeInventory()
 		changeMarket()
 	}
@@ -2220,6 +2237,14 @@ function changeInventory() {
 		$('#rods').html('')
 	}
 
+    if (potion == 1) {
+		$('#potion').html('You own ' + potion + ' Potion. ')
+	} else if (potion > 1) {
+		$('#potion').html('You own ' + potion + ' Potions. ')
+	} else {
+		$('#potion').html('')
+	}
+
 	if (shield == 1) {
 		$('#shield').html('You own ' + shield + ' shield. ')
 	} else if (shield > 1) {
@@ -2725,9 +2750,15 @@ function changeMarket() {
 	}
 
 	if (money >= SawMillAutoPrice) {
-		$('#AutoSaw').css('display', 'block')
+		$('#potion1').css('display', 'block')
 	} else {
-		$('#AutoSaw').css('display', 'none')
+		$('#potion1').css('display', 'none')
+	}
+
+    if (money >= potionPrice) {
+		$('#potion1').css('display', 'block')
+	} else {
+		$('#potion1').css('display', 'none')
 	}
 
     if(SawMill > 0){
