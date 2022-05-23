@@ -1,0 +1,249 @@
+.inventory{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 21px;
+}
+
+.marketPlace {
+    display: none;
+}
+
+
+
+.door1 {
+    width: 400px;
+    position: fixed; bottom: 500px; right: 1200px;
+}
+
+.door2 {
+    width: 400px;
+    position: fixed; bottom: 500px; right: 595px;
+}
+
+.TROLL{
+    width: 600px;
+    position: fixed; top: 0; right: 775px;
+}
+
+.BEAR {
+    width: 600px;
+    position: fixed; top: 0; right: 775px;
+}
+
+.WOLF {
+    width: 600px;
+    position: fixed; top: 0; right: 775px;
+}
+
+.BANDIT {
+    width: 300px;
+    position: fixed; top: 0; right: 900px;
+}
+
+.CHEST {
+    width: 400px;
+    position: fixed; top: 0; right: 870px;
+}
+
+.ENDCHEST {
+    width: 400px;
+    position: fixed; top: 0; right: 870px;
+}
+
+.keyhole {
+    width: 400px;
+    position: fixed; top: 0; right: 870px;
+}
+
+.barTender{
+    display: fixed;
+    position: fixed;top: 0px; right: 1000px;
+    font-size: xx-large;
+}
+
+.tenderTalk2 {
+    display: fixed;
+}
+
+.leanTender{
+    display: fixed;
+    position: fixed;top: 0px; right: 1000px;
+    font-size: xx-large;
+}
+
+.bar-tender {
+    width: 400px;
+}
+.upgrades, .items button{
+    position: fixed;top: 0px; right: 1413px;
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.fishMarket {
+    display: block;
+}
+
+.sellButtons{
+    position: fixed; top: 0px;
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.sellButtons2{
+    position: fixed; top: 0px; right: 1120px;
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.sellButtons3{
+    position: fixed; top: 0px; right: 870px;
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.sellButtons4{
+    position: fixed; top: 0px; right: 495px;
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.tavern {
+    display: none;
+}
+
+.dungeons {
+    display: none;
+}
+
+.dungeon1 {
+    display: none;
+}
+
+.dungeon2 {
+    display: none;
+}
+
+.dungeon3 {
+    display: none;
+}
+
+.dungeon4 {
+    display: none;
+}
+
+.dungeon5 {
+    display: none;
+}
+
+.dungeon6 {
+    display: none;
+}
+
+.dungeon7 {
+    display: none;
+}
+
+.dungeonEnd {
+    display: none;
+}
+
+.Potion {
+    display: none;
+}
+
+.encounter1 {
+    display: none;
+}
+
+.encounter2 {
+    display: none;
+}
+
+.encounter3 {
+    display: none;
+}
+
+.rooms, .Room1, .Room2, .Room3, .Room4, .Room5, .Room6, .Room7, .Room8, .bearEncounter, .wolfEncounter, .robEncounter{
+    display: grid;
+    grid-template-columns: auto;
+    position: fixed;
+    position: absolute; bottom: 500px; right: 1000px;
+}
+
+.PotionOC{
+    display: grid;
+    grid-template-columns: auto;
+    position: fixed;
+    position: absolute; bottom: 500px; right: 1700px;
+}
+
+.gamble {
+    display: grid;
+    margin-bottom: 10px;
+}
+.gambleTable {
+    display: none;
+}
+
+.bar {
+    display: none;
+    position: relative;
+}
+
+.leanBar{
+        display: none;
+        position: relative;
+}
+
+
+.inventory2 {
+    position: fixed; bottom: 0; right: 1000px;
+    font-size: 21px;
+}
+
+.returnButton {
+    position: fixed;top: 350px; right: 1200px;
+    display: table-row;
+
+    display: auto;
+    grid-template-rows: repeat(1, 50px);
+    margin-bottom: 15px;
+}
+.main {
+    position: fixed; top: 20px; left: 10px;
+    margin-bottom: 10px;
+}
+
+.cooking {
+    display: none;
+}
+
+.returnButton2 {
+    position: fixed;top: 350px; right: 1200px;
+    display: table-row;
+
+    display: auto;
+    grid-template-rows: repeat(1, 50px);
+    margin-bottom: 15px;
+}
+.inventory3 {
+    position: fixed; bottom: 500; right: 400px;
+    font-size: 21px;
+}
+
+
+button{
+    display: grid;
+    grid-template-columns: subgrid;
+    background-color: white;
+    font-size: 18px;
+}
+
+.cookedMeat {
+   position: fixed;bottom: 0px; right: 450px;
+    display: grid;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
