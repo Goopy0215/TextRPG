@@ -864,7 +864,7 @@ $('#AutoSaw').click(function () {
 	}
 })
 //Potion
-$('#potion').click(function () {
+$('#potion1').click(function () {
 	if (potion <= 0) {
 		alert('You Have no potions.')
 	} else if (health >= 100) {
@@ -2259,11 +2259,11 @@ function changeInventory() {
 	}
 
     if (potion == 1) {
-		$('#potion').html('You own ' + potion + ' Potion. ')
+		$('#potion1').html('You own ' + potion + ' Potion. ')
 	} else if (potion > 1) {
-		$('#potion').html('You own ' + potion + ' Potions. ')
+		$('#potion1').html('You own ' + potion + ' Potions. ')
 	} else {
-		$('#potion').html('')
+		$('#potion1').html('')
 	}
 
 	if (shield == 1) {
