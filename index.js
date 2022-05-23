@@ -2074,7 +2074,7 @@ function changeInventory() {
 		}
 		gameOver();
         clearSave();
-	}
+	};
 
 	if (money >= 1000000) {
 		$('#money').html('Gold: ' + money + ' SK DID IT FIRST!!')
