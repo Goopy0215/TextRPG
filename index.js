@@ -2730,6 +2730,7 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
+
 	if (pickaxes > 0) {
 		$('#mineStone').css('display', 'block')
 	} else {
@@ -2758,7 +2759,9 @@ function changeMarket() {
 	}
 
 
-    if (sawTime <= 0) {
+    if(SawMill >= 0){
+        $('#sawMill').css('display', 'none')
+}else if (sawTime <= 0) {
 		$('#sawMill').css('display', 'block')
 	} else if (sawTime > 0) {
 		$('#sawMill').css('display', 'none')
