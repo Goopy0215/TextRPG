@@ -833,7 +833,7 @@ $('#buyShield').click(function () {
 	}
 })
 
-$('#potion1').click(function () {
+$('#potion2').click(function () {
 	if (money < potionPrice) {
 		alert("You don't have enough.")
 	} else {
@@ -863,6 +863,27 @@ $('#AutoSaw').click(function () {
 		changeMarket()
 	}
 })
+//Potion
+$('#potion').click(function () {
+	if (potion <= 0) {
+		alert('You Have no potions.')
+	} else if (health >= 100) {
+		alert('You are already full health.')
+        }else if(Math.random < 0.7){
+            alert('You drank a potion and gained health')
+            health += 50
+            potion--
+            changeInventory()
+            changeMarket()
+        }else{
+            alert('You drank a potion and nothing happened')
+            potion--
+        }
+		changeInventory()
+		changeMarket()
+	
+})
+
 //Tavern
 $('#Drink').click(function () {
 	if (money <= drinkPrice) {
