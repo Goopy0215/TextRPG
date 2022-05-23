@@ -2736,9 +2736,6 @@ function changeMarket() {
         $('#sawMill').css('display', 'none')
     }
 
-
-
-
 	if (dungKnow > 0) {
 		$('#dungeon').css('display', 'block')
 	} else {
@@ -2761,8 +2758,9 @@ function changeMarket() {
 	}
 
 
-
-if (sawTime <= 0) {
+if (SawMill == 0){
+    $('sawMill').css('display', 'none')
+}else if (sawTime <= 0) {
 		$('#sawMill').css('display', 'block')
 	} else if (sawTime > 0) {
 		$('#sawMill').css('display', 'none')
