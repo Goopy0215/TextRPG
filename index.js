@@ -2750,9 +2750,15 @@ function changeMarket() {
 	}
 
 	if (money >= SawMillAutoPrice) {
-		$('#potion1').css('display', 'block')
+		$('#AutoSaw').css('display', 'block')
 	} else {
-		$('#potion1').css('display', 'none')
+		$('#AutoSaw').css('display', 'none')
+	}
+
+    if (money >= potionPrice) {
+		$('#potion2').css('display', 'block')
+	} else {
+		$('#potion2').css('display', 'none')
 	}
 
 
