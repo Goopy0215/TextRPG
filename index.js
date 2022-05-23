@@ -2772,16 +2772,7 @@ function changeMarket() {
         $("#mineStone").prop("disabled", false)
     }else if(mineTime > 0){
         $("#mineStone").prop("disabled", true)
-    };
-
-
-    if(pickaxes == 0){
-        $("#mineStone").css("display", "none")
-    }else if(mineTime <= 0){
-        $("#mineStone").prop("disabled", false)
-    }else if(mineTime > 0){
-        $("#mineStone").prop("disabled", true)
-    };
+    }
 
 if (SawMill == 0){
     $('sawMill').css('display', 'none')
