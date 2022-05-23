@@ -1362,15 +1362,15 @@ $('#room1').click(function () {
     if (diceRoll < 1) {
         randomRoom()
     } else if (diceRoll < 2) {
-        randomRoom2()
+        randomRoom()
     } else if (diceRoll < 3) {
         randomRoom()
     } else if (diceRoll < 4) {
-        randomRoom2()
+        randomRoom()
     } else if (diceRoll < 5) {
         randomRoom()
     } else if (diceRoll < 6) {
-        randomRoom2()
+        randomRoom()
     } else if (diceRoll < 7) {
         randomRoom()
     } else if (diceRoll < 8) {
@@ -1385,15 +1385,15 @@ $('#room2').click(function () {
 		if (diceRoll < 1) {
             randomRoom()
 		} else if (diceRoll < 2) {
-            randomRoom2()
+            randomRoom()
 		} else if (diceRoll < 3) {
             randomRoom()
 		} else if (diceRoll < 4) {
-            randomRoom2()
+            randomRoom()
 		} else if (diceRoll < 5) {
             randomRoom()
 		} else if (diceRoll < 6) {
-            randomRoom2()
+            randomRoom()
 		} else if (diceRoll < 7) {
             randomRoom()
 		} else if (diceRoll < 8) {
@@ -1848,48 +1848,18 @@ $('#trap').click(function () {
 	let diceRoll = Math.random() * 3
 	if (diceRoll < 1) {
 		if (shield >= 1) {
-			alert('You walk through the empty doorway and you block the barrage of arrows.')
-			let diceRoll = Math.random() * 3
-			if (diceRoll < 1) {
-				alert('You enter the next room and theres a potion in the middle of it.')
-				menu = switchMenu('dungeon5')
-			} else if (diceRoll < 2) {
-				alert('You enter the next room and theres chest sitting in the middle of it.')
-				menu = switchMenu('dungeon6')
-			} else if (diceRoll < 3) {
-				alert('You enter the next room and theres a door with a keyhole.')
-				menu = switchMenu('dungeon7')
-			}
-		} else {
-			alert('You walk through the empty doorway and die to a barrage of arrows.')
-			health -= 100
-		}
+            alert('You walk through the empty doorway and a barrage of arrows flys out hitting your shield')
+            randomRoom2()
+			}else{
+                alert('You walk through the empty doorway and a barrage of arrows fly out killing you')
+                health -= 100
+            }
 	} else if (diceRoll < 2) {
 		alert('You walk through the empty doorway nothing happens.')
-		let diceRoll = Math.random() * 3
-		if (diceRoll < 1) {
-			alert('You enter the next room and theres a potion in the middle of it.')
-			menu = switchMenu('dungeon5')
-		} else if (diceRoll < 2) {
-			alert('You enter the next room and theres chest sitting in the middle of it.')
-			menu = switchMenu('dungeon6')
-		} else if (diceRoll < 3) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
-		}
+        randomRoom()
 	} else if (diceRoll < 3) {
 		alert('You walk through the empty doorway and hear a noise in a distant room')
-		let diceRoll = Math.random() * 3
-		if (diceRoll < 1) {
-			alert('You enter the next room and theres a door with a keyhole.')
-			menu = switchMenu('dungeon7')
-		} else if (diceRoll < 2) {
-			alert('You enter a room with a chest and what looks to be an exit.')
-			menu = switchMenu('dungeonEnd')
-		} else if (diceRoll < 3) {
-			alert('You enter the next room and theres a troll waiting for you!')
-			menu = switchMenu('dungeon3')
-		}
+        randomRoom2()
 	}
 
 	changeInventory()
