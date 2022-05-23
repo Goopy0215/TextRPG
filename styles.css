@@ -10,7 +10,7 @@
 }
 
 .consumables {
-    display: block;
+    display: none;
     position: fixed; bottom: 20px; right: 1400px;
     font-size: 21px;
 
