@@ -2069,7 +2069,7 @@ function changeInventory() {
 	if (health <= 0) {
 		let alerted = localStorage.getItem('alerted') || ''
 		if (alerted != 'yes') {
-			alert('Game Over!')
+			alert('Game Over!');
 			localStorage.setItem('alerted', 'yes')
 		}
 		gameOver();
