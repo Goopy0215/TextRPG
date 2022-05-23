@@ -2730,10 +2730,10 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
-    if(SawMill >= 0){
-        $('#sawMill').css('display', 'none')
-    }else{
+    if(SawMill > 0){
         $('#sawMill').css('display', 'block')
+    }else{
+        $('#sawMill').css('display', 'none')
     }
 
 
@@ -2817,7 +2817,7 @@ $('#sawMill').click(function () {
         sawTime += 1
 		changeInventory()
 		changeMarket()
-        setTimeout(2000)
+        setTimeout(3000)
         sawTime -= 1
 	}
 })
