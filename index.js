@@ -1323,7 +1323,7 @@ $('#banditRun').click(function () {
 
 
 
-$('#banditflee').click(function () {
+$('#banditFlee').click(function () {
 	if (Math.random() < 0.5) {
 			alert('You got away from the bandits.')
 			health -= 0
