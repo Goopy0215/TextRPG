@@ -2730,6 +2730,12 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
+    if(SawMill >= 0){
+        $('#sawMill').css('display', 'none')
+    }else{
+        $('#sawMill').css('display', 'block')
+    }
+
 
 	if (pickaxes > 0) {
 		$('#mineStone').css('display', 'block')
@@ -2759,9 +2765,8 @@ function changeMarket() {
 	}
 
 
-    if(SawMill >= 0){
-        $('#sawMill').css('display', 'none')
-}else if (sawTime <= 0) {
+
+if (sawTime <= 0) {
 		$('#sawMill').css('display', 'block')
 	} else if (sawTime > 0) {
 		$('#sawMill').css('display', 'none')
@@ -2809,9 +2814,10 @@ $('#sawMill').click(function () {
 	} else {
 		logs -= RefinedWoodPlus
 		RefinedWood++
+        sawTime += 1
 		changeInventory()
 		changeMarket()
-        setTimeout(5000)
+        setTimeout(2000)
         sawTime -= 1
 	}
 })
