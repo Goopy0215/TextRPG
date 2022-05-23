@@ -44,8 +44,6 @@ let rod = 0
 let rodPrice = 750
 let shield = 0
 let shieldPrice = 200
-let potion = 0
-let potionPrice = 1000
 let logPlus = 1
 let stonePlus = 1
 let RefinedWoodPlus = 1
@@ -126,8 +124,6 @@ function updatePlayerData() {
 	player.rodPrice = rodPrice
 	player.shield = shield
 	player.shieldPrice = shieldPrice
-    player.potion = potion
-	player.potionPrice = potionPrice
 	player.logPlus = logPlus
 	player.stonePlus = stonePlus
 	player.RefinedWoodPlus = RefinedWoodPlus
@@ -209,8 +205,6 @@ function updateGameData() {
     rodPrice = player.rodPrice
     shield = player.shield
     shieldPrice = player.shieldPrice
-    potion = player.potion
-    potionPrice = player.potionPrice
     logPlus = player.logPlus
     stonePlus = player.stonePlus
     RefinedWoodPlus = player.RefinedWoodPlus
@@ -833,16 +827,6 @@ $('#buyShield').click(function () {
 	}
 })
 
-$('#potion2').click(function () {
-	if (money < potionPrice) {
-		alert("You don't have enough.")
-	} else {
-		money -= potionPrice
-		potion++
-		changeInventory()
-		changeMarket()
-	}
-})
 
 $('#SawMillBuy').click(function () {
 	logs -= SawMillCost
@@ -862,26 +846,6 @@ $('#AutoSaw').click(function () {
 		changeInventory()
 		changeMarket()
 	}
-})
-//Potion
-$('#potion1').click(function () {
-	if (potion <= 0) {
-		alert('You Have no potions.')
-	} else if (health >= 100) {
-		alert('You are already full health.')
-        }else if(Math.random < 0.7){
-            alert('You drank a potion and gained health')
-            health += 50
-            potion--
-            changeInventory()
-            changeMarket()
-        }else{
-            alert('You drank a potion and nothing happened')
-            potion--
-        }
-		changeInventory()
-		changeMarket()
-	
 })
 
 //Tavern
