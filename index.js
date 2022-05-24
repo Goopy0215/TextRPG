@@ -2897,10 +2897,10 @@ function changeMarket() {
 		$('#autoMiner').css('display', 'none')
 	}
 
-	if (money < 750) {
-		$('#AutoSaw').css('display', 'none')
-	} else {
+	if (money >= 750) {
 		$('#AutoSaw').css('display', 'block')
+	} else {
+		$('#AutoSaw').css('display', 'none')
 	}
 
 	if(SawMillAuto <= 0){
