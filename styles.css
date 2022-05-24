@@ -78,7 +78,7 @@
     width: 400px;
 }
 .upgrades, .items button{
-    position: fixed;top: 0px; right: 1350px;
+    position: fixed;top: 0px; right: 1345px;
     display: grid;
     margin-bottom: 10px;
 }
