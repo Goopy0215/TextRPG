@@ -60,7 +60,7 @@ let autoChopperPrice = 250
 let autoMinerPrice = 500
 let pickaxePrice = 100
 let RefinedWoodPrice = 5
-let stonePrice = 3
+let stonePrice = 2
 let logPrice = 1
 let AutoSawMill = 0
 let barTender = 0
@@ -277,7 +277,7 @@ setInterval(function () {
 	stone += autoStonePlus
 	changeInventory()
 	changeMarket()
-}, 1000)
+}, 2000)
 
 //function for autolog
 setInterval(function () {
