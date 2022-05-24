@@ -866,7 +866,7 @@ $('#autoChopper').click(function () {
 			money -= 5000
 			autologPlus += 3
 	}
-	}else if(autologPlus == 9){
+	}else if(autologPlus >= 9){
 		$('#autoChopper').css('disabled', true)
 	}
 	changeInventory()
