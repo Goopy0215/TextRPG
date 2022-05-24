@@ -836,14 +836,14 @@ $('#autoChopper').click(function () {
 			alert("You don't have enough gold.")
 		} else {
 			money -= autoChopperPrice
-			autologPlus += 1
+			autologPlus++
 	}
 	}else if(autologPlus == 1){
 		if (money < 500) {
 			alert("You don't have enough gold.")
 		} else {
 			money -= 500
-			autologPlus += 1
+			autologPlus++
 	}
 	}else if(autologPlus == 2){
 		if (money < 1000) {
@@ -866,7 +866,7 @@ $('#autoChopper').click(function () {
 			money -= 5000
 			autologPlus += 3
 	}
-	}else {
+	}else if (autologPlus >= 9) {
 		$('#autoChopper').css('disabled', true)
 	}
 	changeInventory()
@@ -2881,7 +2881,7 @@ function changeMarket() {
 		$('#AutoSaw').html('Max Sawmill Upgrade')
 	}
 
-	if(autologPlus = 0){
+	if(autologPlus >= 0){
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [1] (250¢)')
 	}else if(autologPlus == 1){
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [2] (500¢)')
