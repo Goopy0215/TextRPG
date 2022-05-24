@@ -539,7 +539,7 @@ $('#cook10CF').click(function () {
 
 $('#cookallCF').click(function () {
 	if(coal >= CatFish){
-		cookedCarp += 1 * CatFish
+		cookedCF += 1 * CatFish
 		coal -= CatFish
 		CatFish = 0
 	}else{
@@ -576,7 +576,7 @@ $('#cook10LMB').click(function () {
 
 $('#cookallLMB').click(function () {
 	if(coal >= largeMB){
-		cookedCarp += 1 * largeMB
+		cookedLMB += 1 * largeMB
 		coal -= largeMB
 		largeMB = 0
 	}else{
