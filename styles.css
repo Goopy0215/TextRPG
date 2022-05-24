@@ -78,7 +78,7 @@
     width: 400px;
 }
 .upgrades, .items button{
-    position: fixed;top: 0px; right: 1375px;
+    position: fixed;top: 0px; right: 1350px;
     display: grid;
     margin-bottom: 10px;
 }
@@ -95,21 +95,21 @@
 }
 
 .sellButtons2{
-    position: fixed; top: 0px; right: 980px;
+    position: fixed; top: 0px; right: 1130px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
 }
 
 .sellButtons3{
-    position: fixed; top: 0px; right: 800px;
+    position: fixed; top: 0px; right: 950px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
 }
 
 .sellButtons4{
-    position: fixed; top: 0px; right: 600px;
+    position: fixed; top: 0px; right: 770px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
