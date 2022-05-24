@@ -874,6 +874,44 @@ $('#autoChopper').click(function () {
 })
 
 $('#autoMiner').click(function () {
+	if(autoStonePlus <= 0){
+		if (money < autoMinerPrice) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= autoMinerPrice
+			autoStonePlus += 1
+	}
+	}else if(autoStonePlus == 1){
+		if (money < 1000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 1000
+			autoStonePlus += 1
+	}
+	}else if(autoStonePlus == 2){
+		if (money < 2500) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 2500
+			autoStonePlus += 1
+	}
+	}else if(autoStonePlus == 3){
+		if (money < 5000) {
+			alert("You don't have enough gold.")
+		}else {
+			money -= 5000
+			autoStonePlus += 1
+	}
+	}else if(autoStonePlus == 4){
+		if (money < 10000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 10000
+			autoStonePlus += 1
+	}
+	}else if (autoStonePlus >= 5) {
+		$('#autoChopper').css('disabled', true)
+	}
 	money -= autoMinerPrice
 	autoStonePlus += 1
 	changeInventory()
@@ -2868,15 +2906,15 @@ function changeMarket() {
 	}
 
 	if(SawMillAuto <= 0){
-		$('#AutoSaw').html('Upgrade Sawmill lvl [1] (100¢)')
+		$('#AutoSaw').html('Upgrade Sawmill lvl [1] (750¢)')
 	}else if(SawMillAuto == 1){
-		$('#AutoSaw').html('Upgrade Sawmill lvl [2] (250¢)')
+		$('#AutoSaw').html('Upgrade Sawmill lvl [2] (1500¢)')
 	}else if(SawMillAuto == 2){
-		$('#AutoSaw').html('Upgrade Sawmill lvl [3] (500¢)')
+		$('#AutoSaw').html('Upgrade Sawmill lvl [3] (3000¢)')
 	}else if(SawMillAuto == 3){
-		$('#AutoSaw').html('Upgrade Sawmill lvl [4] (1000¢)')
+		$('#AutoSaw').html('Upgrade Sawmill lvl [4] (6000¢)')
 	}else if(SawMillAuto == 4){
-		$('#AutoSaw').html('Upgrade Sawmill lvl [5] (2500¢)')
+		$('#AutoSaw').html('Upgrade Sawmill lvl [5] (12000¢)')
 	}else if(SawMillAuto == 5){
 		$('#AutoSaw').html('Max Sawmill Upgrade')
 	}
@@ -2893,6 +2931,20 @@ function changeMarket() {
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [5] (5000¢)')
 	}else{
 		$('#autoChopper').html('Max Auto Chopper Amount')
+	}
+
+	if(autoStonePlus <= 0){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [1] (500¢)')
+	}else if(autoStonePlus == 1){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [2] (1000¢)')
+	}else if(autoStonePlus == 2){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [3] (2500¢)')
+	}else if(autoStonePlus == 3){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [4] (5000¢)')
+	}else if(autoStonePlus == 4){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [5] (10000¢)')
+	}else{
+		$('#autoMiner').html('Max Auto Miner Amount')
 	}
 
 	if (money >= pickaxePrice) {
