@@ -893,6 +893,28 @@ $('#buyShield').click(function () {
 	}
 })
 
+$('#buyCoal').click(function () {
+	if (money < coalPrice) {
+		alert("You don't have enough.")
+	} else {
+		money -= coalPrice
+		coal++
+		changeInventory()
+		changeMarket()
+	}
+})
+
+$('#buyCoal10').click(function () {
+	if (money < coalPrice * 10) {
+		alert("You don't have enough.")
+	} else {
+		money -= coalPrice * 10
+		coal++
+		changeInventory()
+		changeMarket()
+	}
+})
+
 
 $('#SawMillBuy').click(function () {
 	logs -= SawMillCost
