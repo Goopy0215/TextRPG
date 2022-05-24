@@ -6,7 +6,7 @@ let key = 0
 let relic = 0
 let relicPrice = 1000
 let wolfPelt = 0
-let wolfPeltPrice = 100
+let wolfPeltPrice = 50
 let trollSkin = 0
 let trollSkinPrice = 750
 let diamond = 0
@@ -35,9 +35,9 @@ let CatFish = 0
 let CatFishPrice = 25
 let cookedCF = 0
 let cookedCFPrice = 100
-let deerSkinPrice = 50
+let deerSkinPrice = 25
 let bearPelt = 0
-let bearPeltPrice = 250
+let bearPeltPrice = 150
 let pickaxes = 0
 let sword = 0
 let gun = 0
@@ -2811,6 +2811,12 @@ function changeMarket() {
 		$('#buyRod').css('display', 'none')
 	} else {
 		$('#buyRod').css('display', 'block')
+	}
+
+	if (campfire >= 1) {
+		$('#campFire').css('display', 'none')
+	} else {
+		$('#campFire').css('display', 'block')
 	}
 
 
