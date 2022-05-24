@@ -95,7 +95,7 @@
 }
 
 .sellButtons2{
-    position: fixed; top: 0px; right: 900px;
+    position: fixed; top: 0px; right: 850px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
