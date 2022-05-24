@@ -209,7 +209,7 @@
 }
 
 .returnButton {
-    position: fixed; top: 425px; left: 0px;
+    position: fixed; top: 475px; left: 0px;
     display: block;
 }
 .main {
@@ -222,7 +222,7 @@
 }
 
 .returnButton2 {
-    position: fixed; top: 425px; left: 0px;
+    position: fixed; top: 475px; left: 0px;
     display: block;
 }
 .inventory3 {
