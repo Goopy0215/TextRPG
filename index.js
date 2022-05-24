@@ -2705,6 +2705,18 @@ function changeMarket() {
 		$('#buyPickaxe').css('display', 'block')
 	}
 
+	if (gun >= 1) {
+		$('#buyGun').css('display', 'none')
+	} else {
+		$('#buyGun').css('display', 'block')
+	}
+
+	if (rod >= 1) {
+		$('#buyRod').css('display', 'none')
+	} else {
+		$('#buyRod').css('display', 'block')
+	}
+
 
 
     if(SawMill > 0){
