@@ -76,6 +76,7 @@ let bet50Price = 50
 let bet100Price = 100
 let bet1000Price = 1000
 let dogAttack = 40
+let dungKnow = 0
 let menu
 
 let player = {}
@@ -159,6 +160,7 @@ function updatePlayerData() {
 	player.bet1000Price = bet1000Price
 	player.dogAttack = dogAttack
 	player.campfire = campfire
+	player.dungKnow = dungKnow
 	player.menu = menu
 }
 
@@ -241,6 +243,7 @@ function updateGameData() {
     bet100Price = player.bet100Price
     bet1000Price = player.bet1000Price
     dogAttack = player.dogAttack
+	dungKnow = player.dungKnow
     menu = player.menu
 }
 
@@ -3209,7 +3212,6 @@ function mineFind() {
 	}
 }
 //dialogue
-let dungKnow = 0
 $('#dialogue').click(function () {
 	alert('You can see what ive got.')
 })
