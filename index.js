@@ -2950,21 +2950,21 @@ function mineFind() {
 	if (diceRoll < 0.01) {
 		alert('You found a diamond!')
 		diamond++
-		mineTime += 2
+		mineTime++
 	} else if (diceRoll < 0.02) {
 		alert('You found a ruby!')
 		ruby++
-		mineTime += 2
+		mineTime++
 	} else if (diceRoll < 0.2) {
 		alert('You went mining and hurt yourself.')
 		health -= 10
-		mineTime += 2
+		mineTime++
 	}else if (diceRoll < 0.35){
 		alert('You went mining and found nothing')
-		mineTime += 2
+		mineTime++
 	}else{
 		stone++
-		mineTime += 2
+		mineTime++
 	}
 }
 //dialogue
