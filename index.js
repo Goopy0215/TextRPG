@@ -831,7 +831,7 @@ $('#sellallRuby').click(function () {
 
 //buy items
 $('#autoChopper').click(function () {
-	if(autologPlus == 0){
+	if(autologPlus <= 0){
 		if (money < autoChopperPrice) {
 			alert("You don't have enough gold.")
 		} else {
