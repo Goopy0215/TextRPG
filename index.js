@@ -999,48 +999,48 @@ $('#SawMillBuy').click(function () {
 
 $('#AutoSaw').click(function () {
 	if(SawMillAuto == 0){
-		if (money < SawMillAutoPrice) {
+		if (money < 750) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
 		} else {
-			money -= SawMillAutoPrice
+			money -= 750
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 1){
-		if (money < 250) {
+		if (money < 1500) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
 		} else {
-			money -= 250
+			money -= 1500
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 2){
-		if (money < 500) {
+		if (money < 3000) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
 		} else {
-			money -= 500
+			money -= 3000
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 3){
-		if (money < 1000) {
+		if (money < 6000) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
 		} else {
-			money -= 1000
+			money -= 6000
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 4){
-		if (money < 2500) {
+		if (money < 12000) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
 		} else {
-			money -= 2500
+			money -= 12000
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 5){
