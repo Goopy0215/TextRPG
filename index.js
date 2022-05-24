@@ -2994,20 +2994,20 @@ function mineFind() {
 		alert('You found a ruby!')
 		ruby++
 		mineTime++
-	} else if (diceRoll < 0.06) {
+	} else if (diceRoll < 0.03) {
 		alert('You went mining and hurt yourself.')
 		health -= 20
 		mineTime++
-	}else if(diceRoll < 0.16){
+	}else if(diceRoll < 0.10){
 		alert('You went mining and hurt yourself.')
 		health -= 10
 		mineTime++
-	}else if(diceRoll < 0.26){
+	}else if(diceRoll < 0.20){
 		alert('You went mining and found coal!')
 		coal++
 		mineTime++
 	}
-	else if (diceRoll < 0.40) {
+	else if (diceRoll < 0.30) {
 		alert('You went mining and found nothing')
 		mineTime++
 	}else{
