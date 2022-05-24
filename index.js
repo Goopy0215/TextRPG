@@ -440,88 +440,148 @@ $('#sellallBass').click(function () {
 
 //cook bass
 $('#cook1bass').click(function () {
-	Bass--
-	cookedBass++
+	if(coal >= 1){
+		Bass--
+		cookedBass++
+		coal--
+	}else{
+		alert('You dont have any coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cook10bass').click(function () {
-	Bass -= 10
-	cookedBass++
+	if(coal >= 10){
+		Bass -= 10
+		cookedBass += 10
+		coal -= 10
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cookallbass').click(function () {
-	cookedBass += 1 * Bass
-	Bass = 0
+	if(coal >= Bass){
+		cookedBass += 1 * Bass
+		coal -= Bass
+		Bass = 0
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 //cook carp
 $('#cook1carp').click(function () {
-	carp--
-	cookedCarp++
+	if(coal >= 1){
+		carp--
+		cookedCarp++
+		coal--
+	}else{
+		alert('You dont have any coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cook10carp').click(function () {
-	carp -= 10
-	cookedCarp++
+	if(coal >= 10){
+		carp -= 10
+		cookedCarp += 10
+		coal -= 10
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cookallcarp').click(function () {
-	cookedCarp += 1 * carp
-	carp = 0
+	if(coal >= carp){
+		cookedCarp += 1 * carp
+		coal -= carp
+		carp = 0
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 //cook CF
 $('#cook1CF').click(function () {
-	CatFish--
-	cookedCF++
+	if(coal >= 1){
+		CatFish--
+		cookedCF++
+		coal--
+	}else{
+		alert('You dont have any coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cook10CF').click(function () {
-	CatFish -= 10
-	cookedCF++
+	if(coal >= 10){
+		CatFish -= 10
+		cookedCF += 10
+		coal -= 10
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cookallCF').click(function () {
-	cookedCF += 1 * CatFish
-	CatFish = 0
+	if(coal >= CatFish){
+		cookedCarp += 1 * CatFish
+		coal -= CatFish
+		CatFish = 0
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 //cook LMB
 $('#cook1LMB').click(function () {
-	largeMB--
-	cookedLMB++
+	if(coal >= 1){
+		largeMB--
+		cookedLMB++
+		coal--
+	}else{
+		alert('You dont have any coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cook10LMB').click(function () {
-	largeMB -= 10
-	cookedLMB++
+	if(coal >= 10){
+		largeMB -= 10
+		cookedLMB += 10
+		coal -= 10
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
 
 $('#cookallLMB').click(function () {
-	cookedLMB += 1 * largeMB
-	largeMB = 0
+	if(coal >= largeMB){
+		cookedCarp += 1 * largeMB
+		coal -= largeMB
+		largeMB = 0
+	}else{
+		alert('You dont have enough coal!')
+	}
 	changeInventory()
 	changeMarket()
 })
