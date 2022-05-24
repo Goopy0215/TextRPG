@@ -2692,6 +2692,19 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
+	if (money >= pickaxePrice) {
+		$('#buyPickaxe').css('display', 'block')
+	} else {
+		$('#buyPickaxe').css('display', 'none')
+	}
+
+	
+	if (pickaxes >= 1) {
+		$('#buyPickaxe').css('display', 'none')
+	} else {
+		$('#buyPickaxe').css('display', 'block')
+	}
+
 
 
     if(SawMill > 0){
