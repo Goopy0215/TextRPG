@@ -852,21 +852,21 @@ $('#autoChopper').click(function () {
 			money -= 1000
 			autologPlus += 2
 	}
-	}else if(autologPlus == 3){
+	}else if(autologPlus == 4){
 		if (money < 2500) {
 			alert("You don't have enough gold.")
 		}else {
 			money -= 2500
 			autologPlus += 2
 	}
-	}else if(autologPlus == 4){
+	}else if(autologPlus == 6){
 		if (money < 5000) {
 			alert("You don't have enough gold.")
 		} else {
 			money -= 5000
 			autologPlus += 3
 	}
-	}else if(autologPlus == 5){
+	}else if(autologPlus == 9){
 		$('#autoChopper').css('disabled', true)
 	}
 	changeInventory()
@@ -2887,11 +2887,11 @@ function changeMarket() {
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [2] (500¢)')
 	}else if(autologPlus == 2){
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [3] (1000¢)')
-	}else if(autologPlus == 3){
-		$('#autoChopper').html('Upgrade Auto Chopper lvl [4] (2500¢)')
 	}else if(autologPlus == 4){
+		$('#autoChopper').html('Upgrade Auto Chopper lvl [4] (2500¢)')
+	}else if(autologPlus == 6){
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [5] (5000¢)')
-	}else if(autologPlus == 5){
+	}else if(autologPlus == 9){
 		$('#autoChopper').html('Max Auto Chopper Amount')
 	}
 
