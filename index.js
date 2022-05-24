@@ -76,7 +76,6 @@ let bet50Price = 50
 let bet100Price = 100
 let bet1000Price = 1000
 let dogAttack = 40
-let dungKnow = 0
 let menu
 
 let player = {}
@@ -3211,6 +3210,7 @@ function mineFind() {
 		mineTime++
 	}
 }
+let dungKnow = 0
 //dialogue
 $('#dialogue').click(function () {
 	alert('You can see what ive got.')
@@ -3223,7 +3223,7 @@ $('#dialogue2').click(function () {
 		alert('I already told you everything i know.')
 	} else {
 		alert('I know about some dungeon around here but thats about it.')
-		 dungKnow == 1
+		 dungKnow++
 	}
 })
 
