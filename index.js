@@ -270,7 +270,7 @@ setInterval(function () {
 		changeInventory()
 		changeMarket()
 	}
-}, 8000)
+}, 4000)
 
 //function for automining
 setInterval(function () {
@@ -924,22 +924,43 @@ $('#SawMillBuy').click(function () {
 })
 
 $('#AutoSaw').click(function () {
-	if (money <= SawMillAutoPrice) {
-		alert("You don't have enough money.")
-	} else if (SawMill == 0) {
-		alert("You don't have a SawMill")
-	} else {
-		money -= SawMillAutoPrice
-		SawMillAuto += 1
-		changeInventory()
-		changeMarket()
+	if(SawMillAuto == 0){
+		if (money <= SawMillAutoPrice) {
+			alert("You don't have enough gold.")
+		} else if (SawMill == 0) {
+			alert("You don't have a SawMill")
+		} else {
+			money -= SawMillAutoPrice
+			SawMillAuto += 1
 	}
+	}else if(SawMillAuto == 1){
+		if (money <= 250) {
+			alert("You don't have enough gold.")
+		} else if (SawMill == 0) {
+			alert("You don't have a SawMill")
+		} else {
+			money -= 250
+			SawMillAuto += 1
+	}
+	}else if(SawMillAuto == 2){
+		if (money <= 500) {
+			alert("You don't have enough gold.")
+		} else if (SawMill == 0) {
+			alert("You don't have a SawMill")
+		} else {
+			money -= 500
+			SawMillAuto += 1
+	}
+	}
+
+	changeInventory()
+	changeMarket()
 })
 
 //Tavern
 $('#Drink').click(function () {
 	if (money <= drinkPrice) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (health == 100) {
 		alert('You are too full.')
 	} else if (money >= drinkPrice) {
@@ -953,7 +974,7 @@ $('#Drink').click(function () {
 
 $('#lean').click(function () {
 	if (money <= drinkPrice) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (health == 100) {
 		alert('You are too full.')
 	} else if (money >= drinkPrice) {
@@ -967,7 +988,7 @@ $('#lean').click(function () {
 
 $('#Eat').click(function () {
 	if (money <= steakPrice) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (health == 100) {
 		alert('You are too full.')
 	} else if (money >= steakPrice) {
@@ -981,7 +1002,7 @@ $('#Eat').click(function () {
 
 $('#bean').click(function () {
 	if (money <= steakPrice) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (health == 100) {
 		alert('You are too full.')
 	} else if (money >= steakPrice) {
@@ -997,7 +1018,7 @@ $('#bean').click(function () {
 
 $('#bet10').click(function () {
 	if (money < bet10Price) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (Math.random() < 0.5) {
 		alert('You have won the bet!')
 		money += bet10Price
@@ -1010,7 +1031,7 @@ $('#bet10').click(function () {
 
 $('#bet50').click(function () {
 	if (money < bet50Price) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (Math.random() < 0.5) {
 		alert('You have won the bet!')
 		money += bet50Price
@@ -1023,7 +1044,7 @@ $('#bet50').click(function () {
 
 $('#bet100').click(function () {
 	if (money < bet100Price) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (Math.random() < 0.5) {
 		alert('You have won the bet!')
 		money += bet100Price
@@ -1036,7 +1057,7 @@ $('#bet100').click(function () {
 
 $('#bet1000').click(function () {
 	if (money < bet1000Price) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (Math.random() < 0.5) {
 		alert('You have won the bet!')
 		money += bet1000Price
@@ -1049,7 +1070,7 @@ $('#bet1000').click(function () {
 
 $('#betAll').click(function () {
 	if (money < 1) {
-		alert('You dont have enough money.')
+		alert('You dont have enough gold.')
 	} else if (Math.random() < 0.5) {
 		alert('You have won the bet!')
 		money += money
@@ -2786,6 +2807,14 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'block')
 	} else {
 		$('#AutoSaw').css('display', 'none')
+	}
+
+	if(AutoSawMill == 0){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [1] (100¢)')
+	}else if(AutoSawMill == 1){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [2] (250¢)')
+	}else if(AutoSawMill == 2){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [3] (500¢)')
 	}
 
 	if (money >= pickaxePrice) {
