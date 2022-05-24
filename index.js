@@ -2955,11 +2955,11 @@ function mineFind() {
 		alert('You found a ruby!')
 		ruby++
 		mineTime++
-	} else if (diceRoll < 0.2) {
+	} else if (diceRoll < 0.1) {
 		alert('You went mining and hurt yourself.')
 		health -= 10
 		mineTime++
-	}else if (diceRoll < 0.35){
+	}else if (diceRoll < 0.15) {
 		alert('You went mining and found nothing')
 		mineTime++
 	}else{
