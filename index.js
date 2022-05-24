@@ -2809,12 +2809,12 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
-	if(AutoSawMill == 0){
-		$('#AutoSaw').css('Upgrade Sawmill lvl [1] (100¢)')
-	}else if(AutoSawMill == 1){
-		$('#AutoSaw').css('Upgrade Sawmill lvl [2] (250¢)')
-	}else if(AutoSawMill == 2){
-		$('#AutoSaw').css('Upgrade Sawmill lvl [3] (500¢)')
+	if(SawMillAuto == 0){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [1] (100¢)')
+	}else if(SawMillAuto == 1){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [2] (250¢)')
+	}else if(SawMillAuto == 2){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [3] (500¢)')
 	}
 
 	if (money >= pickaxePrice) {
