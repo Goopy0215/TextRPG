@@ -970,7 +970,7 @@ $('#AutoSaw').click(function () {
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 5){
-		$('#AutoSaw').prop('disabled', true)
+		$('#AutoSaw').css('disabled', true)
 	}
 
 	changeInventory()
