@@ -925,7 +925,7 @@ $('#SawMillBuy').click(function () {
 
 $('#AutoSaw').click(function () {
 	if(SawMillAuto == 0){
-		if (money <= SawMillAutoPrice) {
+		if (money < SawMillAutoPrice) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
@@ -934,7 +934,7 @@ $('#AutoSaw').click(function () {
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 1){
-		if (money <= 250) {
+		if (money < 250) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
@@ -943,7 +943,7 @@ $('#AutoSaw').click(function () {
 			SawMillAuto += 1
 	}
 	}else if(SawMillAuto == 2){
-		if (money <= 500) {
+		if (money < 500) {
 			alert("You don't have enough gold.")
 		} else if (SawMill == 0) {
 			alert("You don't have a SawMill")
@@ -951,6 +951,26 @@ $('#AutoSaw').click(function () {
 			money -= 500
 			SawMillAuto += 1
 	}
+	}else if(SawMillAuto == 3){
+		if (money < 1000) {
+			alert("You don't have enough gold.")
+		} else if (SawMill == 0) {
+			alert("You don't have a SawMill")
+		} else {
+			money -= 1000
+			SawMillAuto += 1
+	}
+	}else if(SawMillAuto == 4){
+		if (money < 2500) {
+			alert("You don't have enough gold.")
+		} else if (SawMill == 0) {
+			alert("You don't have a SawMill")
+		} else {
+			money -= 2500
+			SawMillAuto += 1
+	}
+	}else if(SawMillAuto == 5){
+		$('#AutoSaw').prop('disabled', true)
 	}
 
 	changeInventory()
@@ -2809,12 +2829,18 @@ function changeMarket() {
 		$('#AutoSaw').css('display', 'none')
 	}
 
-	if(SawMillAuto == 0){
+	if(SawMillAuto <= 0){
 		$('#AutoSaw').html('Upgrade Sawmill lvl [1] (100¢)')
 	}else if(SawMillAuto == 1){
 		$('#AutoSaw').html('Upgrade Sawmill lvl [2] (250¢)')
 	}else if(SawMillAuto == 2){
 		$('#AutoSaw').html('Upgrade Sawmill lvl [3] (500¢)')
+	}else if(SawMillAuto == 3){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [4] (1000¢)')
+	}else if(SawMillAuto == 4){
+		$('#AutoSaw').html('Upgrade Sawmill lvl [5] (2500¢)')
+	}else if(SawMillAuto == 5){
+		$('#AutoSaw').html('Max Sawmill Upgrade')
 	}
 
 	if (money >= pickaxePrice) {
