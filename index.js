@@ -14,7 +14,7 @@ let diamondPrice = 250
 let ruby = 0
 let rubyPrice = 200
 let coal = 0
-let coalPrice = 50
+let coalPrice = 25
 let logs = 0
 let stone = 0
 let RefinedWood = 0
@@ -894,10 +894,10 @@ $('#buyShield').click(function () {
 })
 
 $('#buyCoal').click(function () {
-	if (money < coalPrice) {
+	if (money < 25) {
 		alert("You don't have enough.")
 	} else {
-		money -= 50
+		money -= 25
 		coal++
 		changeInventory()
 		changeMarket()
@@ -905,11 +905,11 @@ $('#buyCoal').click(function () {
 })
 
 $('#buyCoal10').click(function () {
-	if (money < coalPrice * 10) {
+	if (money < 250) {
 		alert("You don't have enough.")
 	} else {
-		money -= 500
-		coal++
+		money -= 250
+		coal += 10
 		changeInventory()
 		changeMarket()
 	}
