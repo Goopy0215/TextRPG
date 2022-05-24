@@ -3,6 +3,7 @@
     bottom: 0;
     width: 100%;
     font-size: 21px;
+    line-height: 50%;
 }
 
 .marketPlace {
@@ -206,6 +207,7 @@
 .inventory2 {
     position: fixed; bottom: 0; right: 1000px;
     font-size: 21px;
+    line-height: 50%;
 }
 
 .returnButton {
@@ -228,6 +230,7 @@
 .inventory3 {
     position: fixed; bottom: 500; right: 400px;
     font-size: 21px;
+    line-height: 50%;
 }
 
 
