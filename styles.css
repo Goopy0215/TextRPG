@@ -209,12 +209,7 @@
 }
 
 .returnButton {
-    position: fixed;top: 350px; right: 1200px;
-    display: table-row;
-
-    display: auto;
-    grid-template-rows: repeat(1, 50px);
-    margin-bottom: 15px;
+    display: block;
 }
 .main {
     position: fixed; top: 20px; left: 10px;
@@ -226,12 +221,7 @@
 }
 
 .returnButton2 {
-    position: fixed;top: 350px; right: 1200px;
-    display: table-row;
-
-    display: auto;
-    grid-template-rows: repeat(1, 50px);
-    margin-bottom: 15px;
+display: block;
 }
 .inventory3 {
     position: fixed; bottom: 500; right: 400px;
