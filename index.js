@@ -2897,7 +2897,7 @@ function changeMarket() {
 		$('#autoMiner').css('display', 'none')
 	}
 
-	if (money < SawMillAutoPrice) {
+	if (money < 750) {
 		$('#AutoSaw').css('display', 'none')
 	} else {
 		$('#AutoSaw').css('display', 'block')
