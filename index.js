@@ -912,8 +912,6 @@ $('#autoMiner').click(function () {
 	}else if (autoStonePlus >= 5) {
 		$('#autoChopper').css('disabled', true)
 	}
-	money -= autoMinerPrice
-	autoStonePlus += 1
 	changeInventory()
 	changeMarket()
 })
