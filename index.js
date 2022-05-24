@@ -829,8 +829,44 @@ $('#sellallRuby').click(function () {
 
 //buy items
 $('#autoChopper').click(function () {
-	money -= autoChopperPrice
-	autologPlus++
+	if(autologPlus == 0){
+		if (money < autoChopperPrice) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= autoChopperPrice
+			autologPlus += 1
+	}
+	}else if(autologPlus == 1){
+		if (money < 500) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 500
+			autologPlus += 1
+	}
+	}else if(autologPlus == 2){
+		if (money < 1000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 1000
+			autologPlus += 2
+	}
+	}else if(autologPlus == 3){
+		if (money < 2500) {
+			alert("You don't have enough gold.")
+		}else {
+			money -= 2500
+			autologPlus += 2
+	}
+	}else if(autologPlus == 4){
+		if (money < 5000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 5000
+			autologPlus += 3
+	}
+	}else if(autologPlus == 5){
+		$('#autoChopper').css('disabled', true)
+	}
 	changeInventory()
 	changeMarket()
 })
@@ -2841,6 +2877,20 @@ function changeMarket() {
 		$('#AutoSaw').html('Upgrade Sawmill lvl [5] (2500¢)')
 	}else if(SawMillAuto == 5){
 		$('#AutoSaw').html('Max Sawmill Upgrade')
+	}
+
+	if(autologPlus <= 0){
+		$('#autoChopper').html('Upgrade Auto Chopper lvl [1] (250¢)')
+	}else if(autologPlus == 1){
+		$('#autoChopper').html('Upgrade Auto Chopper lvl [2] (500¢)')
+	}else if(autologPlus == 2){
+		$('#autoChopper').html('Upgrade Auto Chopper lvl [3] (1000¢)')
+	}else if(autologPlus == 3){
+		$('#autoChopper').html('Upgrade Auto Chopper lvl [4] (2500¢)')
+	}else if(autologPlus == 4){
+		$('#autoChopper').html('Upgrade Auto Chopper lvl [5] (5000¢)')
+	}else if(autologPlus == 5){
+		$('#autoChopper').html('Max Auto Chopper Amount')
 	}
 
 	if (money >= pickaxePrice) {
