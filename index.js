@@ -2881,7 +2881,7 @@ function changeMarket() {
 		$('#AutoSaw').html('Max Sawmill Upgrade')
 	}
 
-	if(autologPlus >= 0){
+	if(autologPlus <= 0){
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [1] (250¢)')
 	}else if(autologPlus == 1){
 		$('#autoChopper').html('Upgrade Auto Chopper lvl [2] (500¢)')
