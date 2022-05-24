@@ -897,7 +897,7 @@ $('#buyCoal').click(function () {
 	if (money < coalPrice) {
 		alert("You don't have enough.")
 	} else {
-		money -= coalPrice
+		money -= 50
 		coal++
 		changeInventory()
 		changeMarket()
@@ -908,7 +908,7 @@ $('#buyCoal10').click(function () {
 	if (money < coalPrice * 10) {
 		alert("You don't have enough.")
 	} else {
-		money -= coalPrice * 10
+		money -= 500
 		coal++
 		changeInventory()
 		changeMarket()
