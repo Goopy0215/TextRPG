@@ -836,37 +836,37 @@ $('#autoChopper').click(function () {
 			alert("You don't have enough gold.")
 		} else {
 			money -= autoChopperPrice
-			autologPlus++
+			autologPlus += 1
 	}
 	}else if(autologPlus == 1){
 		if (money < 500) {
 			alert("You don't have enough gold.")
 		} else {
 			money -= 500
-			autologPlus++
+			autologPlus += 1
 	}
 	}else if(autologPlus == 2){
 		if (money < 1000) {
 			alert("You don't have enough gold.")
 		} else {
 			money -= 1000
-			autologPlus += 2
+			autologPlus += 1
 	}
-	}else if(autologPlus == 4){
+	}else if(autologPlus == 3){
 		if (money < 2500) {
 			alert("You don't have enough gold.")
 		}else {
 			money -= 2500
-			autologPlus += 2
+			autologPlus += 1
 	}
-	}else if(autologPlus == 6){
+	}else if(autologPlus == 4){
 		if (money < 5000) {
 			alert("You don't have enough gold.")
 		} else {
 			money -= 5000
-			autologPlus += 3
+			autologPlus += 1
 	}
-	}else if (autologPlus >= 9) {
+	}else if (autologPlus >= 5) {
 		$('#autoChopper').css('disabled', true)
 	}
 	changeInventory()
