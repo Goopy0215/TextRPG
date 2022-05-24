@@ -10,9 +10,11 @@ let wolfPeltPrice = 100
 let trollSkin = 0
 let trollSkinPrice = 750
 let diamond = 0
-let diamondPrice = 1000
+let diamondPrice = 250
 let ruby = 0
-let rubyPrice = 1000
+let rubyPrice = 200
+let coal = 0
+let coalPrice = 50
 let logs = 0
 let stone = 0
 let RefinedWood = 0
@@ -93,6 +95,8 @@ function updatePlayerData() {
 	player.diamondPrice = diamondPrice
 	player.ruby = ruby
 	player.rubyPrice = rubyPrice
+	player.coal = coal
+	player.coalPrice = coalPrice
 	player.logs = logs
 	player.stone = stone
 	player.RefinedWood = RefinedWood
@@ -174,6 +178,8 @@ function updateGameData() {
     diamondPrice = player.diamondPrice
     ruby = player.ruby
     rubyPrice = player.rubyPrice
+	coal = player.coal
+    coalPrice = player.coalPrice
     logs = player.logs
     stone = player.stone
     RefinedWood = player.RefinedWood
@@ -2094,6 +2100,14 @@ function changeInventory() {
 		$('#stone').html('')
 	}
 
+	if (coal == 1) {
+		$('#coal').html('You have ' + coal + ' coal. ')
+	} else if (coal > 1) {
+		$('#coal').html('You have ' + coal + ' coals. ')
+	} else {
+		$('#coal').html('')
+	}
+
 	if (RefinedWood == 1) {
 		$('#refinedWood').html('You own ' + RefinedWood + ' RefinedWood. ')
 	} else if (RefinedWood > 1) {
@@ -2972,19 +2986,28 @@ function leanBar() {
 
 function mineFind() {
 	let diceRoll = Math.random()
-	if (diceRoll < 0.01) {
+	if (diceRoll < 0.005) {
 		alert('You found a diamond!')
 		diamond++
 		mineTime++
-	} else if (diceRoll < 0.02) {
+	} else if (diceRoll < 0.01) {
 		alert('You found a ruby!')
 		ruby++
 		mineTime++
-	} else if (diceRoll < 0.1) {
+	} else if (diceRoll < 0.06) {
+		alert('You went mining and hurt yourself.')
+		health -= 20
+		mineTime++
+	}else if(diceRoll < 0.16){
 		alert('You went mining and hurt yourself.')
 		health -= 10
 		mineTime++
-	}else if (diceRoll < 0.15) {
+	}else if(diceRoll < 0.26){
+		alert('You went mining and found coal!')
+		coal++
+		mineTime++
+	}
+	else if (diceRoll < 0.40) {
 		alert('You went mining and found nothing')
 		mineTime++
 	}else{
