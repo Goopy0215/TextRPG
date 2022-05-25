@@ -3036,8 +3036,6 @@ function switchMenu(menu) {
 $('#chop').click(function () {
 	chopTime += 1
 	logs += logPlus
-	changeInventory()
-	changeMarket()
 	setTimeout(1500)
 chopTime -= 1
 })
