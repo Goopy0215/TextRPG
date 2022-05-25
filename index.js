@@ -251,7 +251,6 @@ setInterval(function () {
 	if (health > 100) {
 		health = 100
 		changeInventory()
-		changeMarket()
 	}
 }, 100)
 
@@ -270,7 +269,6 @@ setInterval(function () {
 		logs -= RefinedWoodPlus * SawMillAuto
 		RefinedWood += SawMillAuto
 		changeInventory()
-		changeMarket()
 	}
 }, 4000)
 
@@ -278,14 +276,12 @@ setInterval(function () {
 setInterval(function () {
 	stone += autoStonePlus
 	changeInventory()
-	changeMarket()
 }, 2000)
 
 //function for autolog
 setInterval(function () {
 	logs += autologPlus
 	changeInventory()
-	changeMarket()
 }, 1000)
 
 //sell wood
@@ -3035,9 +3031,10 @@ $('#chop').click(function () {
 	logs += logPlus
 	changeInventory()
 	changeMarket()
-	setTimeout(1500)
-	chopTime -= 1
 })
+
+setTimeout(1500)
+chopTime -= 1
 
 let chopTime = 0
 let mineTime = 0
@@ -3067,7 +3064,7 @@ $('#sawMill').click(function () {
 		changeInventory()
 		changeMarket()
         setTimeout(3000)
-        sawTime -= 1
+			sawTime -= 1
 	}
 })
 
