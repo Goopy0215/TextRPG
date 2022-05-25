@@ -2053,6 +2053,7 @@ $('#trap').click(function () {
 		if (shield >= 1) {
             alert('You walk through the empty doorway and a barrage of arrows flys out hitting your shield')
             RandomRoom2()
+			shield -= 1
 			}else{
                 alert('You walk through the empty doorway and a barrage of arrows fly out killing you')
                 health -= 100
