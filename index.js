@@ -2386,7 +2386,7 @@ function changeInventory() {
 	}
 
 	if (rod == 1) {
-		$('#rods').html('You own ' + rod + ' Rod. ')
+		$('#rods').html('You own ' + rod + ' Fishing Rod. ')
 	} else if (rod > 1) {
 		$('#rods').html('You own ' + rod + ' Rods. ')
 	} else {
