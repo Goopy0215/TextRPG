@@ -2274,9 +2274,9 @@ function changeInventory() {
 	}
 
 	if (logs == 1) {
-		$('#logs').html('You own ' + logs + ' log. ')
+		$('#logs').html('You have ' + logs + ' log. ')
 	} else if (logs > 1) {
-		$('#logs').html('You own ' + logs + ' logs. ')
+		$('#logs').html('You have ' + logs + ' logs. ')
 	} else {
 		$('#logs').html('')
 	}
@@ -2290,9 +2290,9 @@ function changeInventory() {
 	}
 
 	if (stone == 1) {
-		$('#stone').html('You own ' + stone + ' stone. ')
+		$('#stone').html('You have ' + stone + ' stone. ')
 	} else if (stone > 1) {
-		$('#stone').html('You own ' + stone + ' stones. ')
+		$('#stone').html('You have ' + stone + ' stones. ')
 	} else {
 		$('#stone').html('')
 	}
@@ -2306,9 +2306,9 @@ function changeInventory() {
 	}
 
 	if (RefinedWood == 1) {
-		$('#refinedWood').html('You own ' + RefinedWood + ' RefinedWood. ')
+		$('#refinedWood').html('You have ' + RefinedWood + ' RefinedWood. ')
 	} else if (RefinedWood > 1) {
-		$('#refinedWood').html('You own ' + RefinedWood + ' RefinedWoods. ')
+		$('#refinedWood').html('You have ' + RefinedWood + ' RefinedWoods. ')
 	} else {
 		$('#refinedWood').html('')
 	}
@@ -2330,49 +2330,49 @@ function changeInventory() {
 	}
 
 	if (deerSkin == 1) {
-		$('#hide').html('You own ' + deerSkin + ' Hide. ')
+		$('#hide').html('You have ' + deerSkin + ' Hide. ')
 	} else if (deerSkin > 1) {
-		$('#hide').html('You own ' + deerSkin + ' Hides. ')
+		$('#hide').html('You have ' + deerSkin + ' Hides. ')
 	} else {
 		$('#hide').html('')
 	}
 
 	if (bearPelt == 1) {
-		$('#bearPelt').html('You own ' + bearPelt + ' Bear Pelt. ')
+		$('#bearPelt').html('You have ' + bearPelt + ' Bear Pelt. ')
 	} else if (bearPelt > 1) {
-		$('#bearPelt').html('You own ' + bearPelt + ' Bear Pelts. ')
+		$('#bearPelt').html('You have ' + bearPelt + ' Bear Pelts. ')
 	} else {
 		$('#bearPelt').html('')
 	}
 
 	if (cookedBass == 1) {
-		$('#cookedBass').html('You own ' + cookedBass + ' Cooked Bass. ')
+		$('#cookedBass').html('You have ' + cookedBass + ' Cooked Bass. ')
 	} else if (cookedBass > 1) {
-		$('#cookedBass').html('You own ' + cookedBass + ' Cooked Bass. ')
+		$('#cookedBass').html('You have ' + cookedBass + ' Cooked Bass. ')
 	} else {
 		$('#cookedBass').html('')
 	}
 
 	if (cookedCarp == 1) {
-		$('#cookedCarp').html('You own ' + cookedCarp + ' Cooked Carp. ')
+		$('#cookedCarp').html('You have ' + cookedCarp + ' Cooked Carp. ')
 	} else if (cookedCarp > 1) {
-		$('#cookedCarp').html('You own ' + cookedCarp + ' Cooked Carp. ')
+		$('#cookedCarp').html('You have ' + cookedCarp + ' Cooked Carp. ')
 	} else {
 		$('#cookedCarp').html('')
 	}
 
 	if (cookedCF == 1) {
-		$('#cookedCF').html('You own ' + cookedCF + ' Cooked Cat Fish. ')
+		$('#cookedCF').html('You have ' + cookedCF + ' Cooked Cat Fish. ')
 	} else if (cookedCF > 1) {
-		$('#cookedCF').html('You own ' + cookedCF + ' Cooked Cat Fish. ')
+		$('#cookedCF').html('You have ' + cookedCF + ' Cooked Cat Fish. ')
 	} else {
 		$('#cookedCF').html('')
 	}
 
 	if (cookedLMB == 1) {
-		$('#cookedLMB').html('You own ' + cookedLMB + ' Cooked LargeMouth Bass. ')
+		$('#cookedLMB').html('You have ' + cookedLMB + ' Cooked LargeMouth Bass. ')
 	} else if (cookedLMB > 1) {
-		$('#cookedLMB').html('You own ' + cookedLMB + ' Cooked LargeMouth Bass. ')
+		$('#cookedLMB').html('You have ' + cookedLMB + ' Cooked LargeMouth Bass. ')
 	} else {
 		$('#cookedLMB').html('')
 	}
@@ -2410,17 +2410,17 @@ function changeInventory() {
 	}
 
 	if (key == 1) {
-		$('#key').html('You own ' + key + ' key. ')
+		$('#key').html('You have ' + key + ' key. ')
 	} else if (key > 1) {
-		$('#key').html('You own ' + key + ' keys.')
+		$('#key').html('You have ' + key + ' keys.')
 	} else {
 		$('#key').html('')
 	}
 
 	if (relic == 1) {
-		$('#relic').html('You own ' + relic + ' relic. ')
+		$('#relic').html('You have ' + relic + ' relic. ')
 	} else if (relic > 1) {
-		$('#relic').html('You own ' + relic + ' relics.')
+		$('#relic').html('You have ' + relic + ' relics.')
 	} else {
 		$('#relic').html('')
 	}
