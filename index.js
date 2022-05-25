@@ -2052,17 +2052,17 @@ $('#trap').click(function () {
 	if (diceRoll < 1) {
 		if (shield >= 1) {
             alert('You walk through the empty doorway and a barrage of arrows flys out hitting your shield')
-            randomRoom2()
+            RandomRoom2()
 			}else{
                 alert('You walk through the empty doorway and a barrage of arrows fly out killing you')
                 health -= 100
             }
 	} else if (diceRoll < 2) {
 		alert('You walk through the empty doorway nothing happens.')
-        randomRoom()
+        RandomRoom()
 	} else if (diceRoll < 3) {
 		alert('You walk through the empty doorway and hear a noise in a distant room')
-        randomRoom2()
+        RandomRoom2()
 	}
 
 	changeInventory()
