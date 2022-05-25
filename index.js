@@ -249,7 +249,6 @@ function updateGameData() {
 
 //health function
 setInterval(function () {
-	Math.floor(health)
 	if (health > 100) {
 		health = 100
 		changeInventory()
@@ -258,6 +257,7 @@ setInterval(function () {
 
 //money function
 setInterval(function () {
+	Math.floor(money)
 	if (money < 0) {
 		money = 0
 		changeInventory()
