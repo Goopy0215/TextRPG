@@ -2394,17 +2394,17 @@ function changeInventory() {
 	}
 
 	if (shield == 1) {
-		$('#shield').html('You own ' + shield + ' shield. ')
+		$('#shield').html('You own ' + shield + ' Shield. ')
 	} else if (shield > 1) {
-		$('#shield').html('You own ' + shield + ' shields')
+		$('#shield').html('You own ' + shield + ' Shields')
 	} else {
 		$('#shield').html('')
 	}
 
 	if (sword == 1) {
-		$('#swords').html('You own ' + sword + ' sword. ')
+		$('#swords').html('You own ' + sword + ' Sword. ')
 	} else if (sword > 1) {
-		$('#swords').html('You own ' + sword + ' swords')
+		$('#swords').html('You own ' + sword + ' Swords')
 	} else {
 		$('#swords').html('')
 	}
