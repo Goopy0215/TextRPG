@@ -246,7 +246,10 @@ function updateGameData() {
     menu = player.menu
 }
 
-	Math.floor(money)
+	Math.floor()
+	{
+		money
+	}
 
 //health function
 setInterval(function () {
