@@ -917,8 +917,12 @@ $('#autoMiner').click(function () {
 })
 
 $('#campFire').click(function () {
-	logs -= campfirePrice
-	campfire++
+	if(logs < campfirePrice){
+		alert('You dont have enough logs.')
+	}else{
+		logs -= campfirePrice
+		campfire++
+	}
 	changeMarket()
 	changeInventory()
 })
@@ -2639,12 +2643,7 @@ function changeInventory() {
 		$('#cook10LMB').css('display', 'none')
 	}
 
-	if (logs <= 0) {
-		$('#campFire').css('display', 'block')
-	} else {
-		$('#campFire').css('display', 'none')
-	}
-	if (logs > campfirePrice) {
+	if (logs >= campfirePrice) {
 		$('#campFire').css('display', 'block')
 	} else {
 		$('#campFire').css('display', 'none')
