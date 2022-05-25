@@ -1226,7 +1226,7 @@ $('#gambling').click(function () {
 })
 
 $('#visit3').click(function () {
-	let diceRoll = Math.random() * 1.5
+	let diceRoll = Math.random() * 3
 	if (gun == 0) {
 		alert("You don't have a gun to go hunting.")
 	} else if (diceRoll < 0.1) {
@@ -1243,10 +1243,10 @@ $('#visit3').click(function () {
 			alert('You ran into a group of bandits while hunting!')
 			menu = switchMenu('encounter3')
 		}
-	} else if (diceRoll < 1) {
+	} else if (diceRoll < 1.75) {
         alert('You went hunting and found a deer!')
 		deerSkin++
-	} else if (diceRoll < 1.2) {
+	} else if (diceRoll < 2.5) {
 		if(Math.random < 0.5){
 			logs += 5
 			alert('You went out and found some logs!')
