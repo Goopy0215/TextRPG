@@ -1321,7 +1321,7 @@ $('#visit3').click(function () {
 })
 
 $('#fishing').click(function () {
-	let diceRoll = Math.random() * 2
+	let diceRoll = Math.random() * 1.5
 	if (rod == 0) {
 		alert("You don't have a Fishing Rod to go Fishing.")
 	} else if (diceRoll < 0.15) {
