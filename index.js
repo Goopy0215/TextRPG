@@ -269,6 +269,7 @@ setInterval(function () {
 		logs -= RefinedWoodPlus * SawMillAuto
 		RefinedWood += SawMillAuto
 		changeInventory()
+		changeMarket()
 	}
 }, 4000)
 
@@ -276,12 +277,14 @@ setInterval(function () {
 setInterval(function () {
 	stone += autoStonePlus
 	changeInventory()
+	changeMarket()
 }, 2000)
 
 //function for autolog
 setInterval(function () {
 	logs += autologPlus
 	changeInventory()
+	changeMarket()
 }, 1000)
 
 //sell wood
