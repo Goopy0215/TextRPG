@@ -1,5 +1,5 @@
 let health = 100
-let money = 1000
+let money = 1000.5
 let campfire = 0
 let campfirePrice = 100
 let key = 0
