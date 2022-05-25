@@ -263,6 +263,7 @@ setInterval(function () {
 		changeMarket()
 	}
 }, 100)
+Math.round(health)
 
 //function for auto saw
 setInterval(function () {
