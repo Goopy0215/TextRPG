@@ -2356,11 +2356,11 @@ function changeInventory() {
 	};
 
 	if (money >= 1000000) {
-		$('#money').html('Gold: ' + money + ' SK DID IT FIRST!!')
+		$('#money').html('Gold: ' + Math.floor(money) + ' SK DID IT FIRST!!')
 	} else if (money >= 1100000) {
-		$('#money').html('Gold: ' + money)
+		$('#money').html('Gold: ' + Math.floor(money))
 	} else {
-		$('#money').html('Gold: ' + money)
+		$('#money').html('Gold: ' + Math.floor(money))
 	}
 
 	if (logs == 1) {
