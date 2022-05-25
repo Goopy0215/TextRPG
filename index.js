@@ -245,7 +245,9 @@ function updateGameData() {
 	dungKnow = player.dungKnow
     menu = player.menu
 }
-
+setInterval(function(){
+	Math.floor(money)
+}, 100)
 
 //health function
 setInterval(function () {
@@ -257,7 +259,6 @@ setInterval(function () {
 
 //money function
 setInterval(function () {
-	Math.floor(money)
 	if (money < 0) {
 		money = 0
 		changeInventory()
