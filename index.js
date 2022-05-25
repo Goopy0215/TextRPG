@@ -246,19 +246,6 @@ function updateGameData() {
     menu = player.menu
 }
 
-	//chop time
-	setInterval (function(){
-		btnTimer1()
-	}, 1500)
-
-
-	function btnTimer1(){
-		if (chopTime <=0) {
-			$("#chop").prop("disabled",false)
-		  } else {
-			$("#chop").prop("disabled",true)
-		  }
-	}
 
 //health function
 setInterval(function () {
@@ -3002,6 +2989,12 @@ function changeMarket() {
 	} else {
 		$('#dungeon').css('display', 'none')
 	}
+
+	if (chopTime <=0) {
+		$("#chop").prop("disabled",false)
+	  } else {
+		$("#chop").prop("disabled",true)
+	  }
 
 
 
