@@ -245,9 +245,8 @@ function updateGameData() {
 	dungKnow = player.dungKnow
     menu = player.menu
 }
-setInterval(function(){
+
 	Math.floor(money)
-}, 100)
 
 //health function
 setInterval(function () {
