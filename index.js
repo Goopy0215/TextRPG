@@ -249,6 +249,7 @@ function updateGameData() {
 
 //health function
 setInterval(function () {
+	Math.floor(health)
 	if (health > 100) {
 		health = 100
 		changeInventory()
@@ -263,7 +264,6 @@ setInterval(function () {
 		changeMarket()
 	}
 }, 100)
-Math.round(health)
 
 //function for auto saw
 setInterval(function () {
