@@ -26,7 +26,7 @@ let cookedCarpPrice = 40
 let largeMB = 0
 let LMBP = 50
 let cookedLMB = 0
-let cookedLMBPrice = 250
+let cookedLMBPrice = 100
 let Bass = 0
 let BassPrice = 5
 let cookedBass = 0
@@ -648,7 +648,7 @@ $('#sell10CC').click(function () {
 })
 
 $('#sellallCC').click(function () {
-	money += cookedCarpPrice * cookedBass
+	money += cookedCarpPrice * cookedCarp
 	cookedCarp = 0
 	changeInventory()
 	changeMarket()
