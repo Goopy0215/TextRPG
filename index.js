@@ -1466,7 +1466,7 @@ $('#banditFight').click(function () {
 		} else if (diceRoll < 2) {
 			alert('You fought the bandits off and was gravely injured and lost some of your gold.')
 			health -= 70
-			gold -= 75
+			money -= money * 0.1
 			alert('You limp out of the forest bleeding from your wounds.')
 		} else if (diceRoll < 3) {
 			alert('You fought off all the bandits without a scratch')
@@ -1477,29 +1477,29 @@ $('#banditFight').click(function () {
 
 $('#banditRun').click(function () {
 	if (Math.random() < 0.5) {
-		if (money >= 200) {
-			alert('You gave the bandits 200 gold and got away without a scratch.')
+		if (money >= 0) {
+			alert('You gave the bandits half your gold and got away without a scratch.')
 			health -= 0
-			money -= 200
+			money -= money * 0.5
 			alert('You walk back out of the forest.')
 		} else {
 			alert('You didnt have enough gold so the bandits beat you up.')
 			health -= 25
 		}
 	} else if (Math.random() < 0.5) {
-		if (money >= 150) {
-			alert('You gave the bandits 150 gold and got away without a scratch.')
+		if (money >= 0) {
+			alert('You gave the bandits a quarter of your gold and got away without a scratch.')
 			health -= 0
-			money -= 150
+			money -= money * 0.25
 		} else {
 			alert('You dont have enough gold so the bandits beat you up.')
 			health -= 25
 		}
 	} else {
-		if (money >= 100) {
-			alert('You gave the bandits 100 gold and got away without a scratch.')
+		if (money >= 0) {
+			alert('You gave the bandits some gold and got away without a scratch.')
 			health -= 0
-			money -= 100
+			money -= money * 0.1
 		} else {
 			alert('You didnt have enough gold so the bandits beat you up.')
 			health -= 25
@@ -1519,7 +1519,7 @@ $('#banditFlee').click(function () {
 	} else if (Math.random() < 0.5) {
 			alert('The bandits caught up and took some of your gold and roughed you up.')
 			health -= 25
-            money -= 100
+            money -= money * 0.5
 	} else {
         if(shields >= 1){
             alert('The bandits hit your shield with an arrow but you got away.')
