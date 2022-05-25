@@ -3273,7 +3273,7 @@ $('#dialogue2').click(function () {
 		alert('I already told you everything i know.')
 	} else {
 		alert('I know about some dungeon around here but thats about it.')
-		 dungKnow++
+		 dungKnow += 1
 	}
 })
 
