@@ -1226,102 +1226,38 @@ $('#gambling').click(function () {
 })
 
 $('#visit3').click(function () {
-	let diceRoll = Math.random() * 29
+	let diceRoll = Math.random() * 1.5
 	if (gun == 0) {
 		alert("You don't have a gun to go hunting.")
-	} else if (diceRoll < 1) {
-		logs += 5
-		alert('You went out and found some logs!')
-		changeInventory()
-	} else if (diceRoll < 2) {
-		alert('You went hunting and found nothing')
-		changeInventory()
-	} else if (diceRoll < 3) {
-		alert('You went hunting and were attacked by dogs!')
-		menu = switchMenu('encounter2')
-	} else if (diceRoll < 4) {
-		health -= 10
-		alert('You went hunting and found a deer!')
-		deerSkin++
-	} else if (diceRoll < 5) {
-		logs += 5
-		alert('You went out and found some logs!')
-	} else if (diceRoll < 6) {
-		stone += 5
-		alert('You went out and found some stones!')
-	} else if (diceRoll < 7) {
-		alert('You went hunting and found nothing')
-		changeInventory()
-	} else if (diceRoll < 8) {
-		alert('You ran into a group of travelers while hunting!')
-		menu = switchMenu('encounter4')
-		changeInventory()
-	} else if (diceRoll < 9) {
-		alert('You went hunting and found nothing')
-		changeInventory()
-	} else if (diceRoll < 10) {
-		alert('You went hunting and found a deer!')
-		deerSkin++
-	} else if (diceRoll < 11) {
-		health -= 10
-		alert('You went hunting and tripped')
-	} else if (diceRoll < 12) {
-		logs += 5
-		alert('You went hunting and found a deer!')
-		deerSkin++
-	} else if (diceRoll < 13) {
-		stone += 5
-		alert('You went out and found some stones!')
-	} else if (diceRoll < 14) {
-		alert('You ran into a group of bandits while hunting!')
-		menu = switchMenu('encounter3')
-	} else if (diceRoll < 15) {
-		alert('You went hunting and found a deer!')
-		deerSkin++
-		changeInventory()
-	} else if (diceRoll < 16) {
-		alert('You went hunting and found nothing')
-		changeInventory()
-	} else if (diceRoll < 17) {
-		alert('You went hunting and were attacked by dogs!')
-		menu = switchMenu('encounter2')
-	} else if (diceRoll < 18) {
-		health -= 10
-		alert('You went hunting and found a deer!')
-		deerSkin++
-	} else if (diceRoll < 19) {
-		logs += 5
-		alert('You went out and found some logs!')
-	} else if (diceRoll < 20) {
-		stone += 5
-		alert('You went out and found some stones!')
-	} else if (diceRoll < 21) {
-		alert('You went hunting and found nothing')
-		changeInventory()
-	} else if (diceRoll < 22) {
-		alert('You went hunting and found a deer!')
-		deerSkin++
-		changeInventory()
-	} else if (diceRoll < 23) {
-		alert('You went hunting and found nothing')
-		changeInventory()
-	} else if (diceRoll < 24) {
-		alert('You went hunting and found a deer!')
-		deerSkin++
-	} else if (diceRoll < 25) {
-		health -= 10
-		alert('You went hunting and tripped')
-	} else if (diceRoll < 26) {
-		logs += 5
-		alert('You went hunting and found a deer!')
-		deerSkin++
-	} else if (diceRoll < 28) {
-		stone += 5
-		alert('You went out and found some stones!')
-	} else if (diceRoll < 29) {
+	} else if (diceRoll < 0.1) {
 		alert('You run into a bear on your hunting trip!')
 		menu = switchMenu('encounter1')
+	} else if (diceRoll < 0.25) {
+		alert('You went hunting and were attacked by dogs!')
+		menu = switchMenu('encounter2')
+	} else if (diceRoll < 0.50) {
+		if (Math.random < 0.5){
+			alert('You ran into a group of travelers while hunting!')
+			menu = switchMenu('encounter4')
+		}else{
+			alert('You ran into a group of bandits while hunting!')
+			menu = switchMenu('encounter3')
+		}
+	} else if (diceRoll < 1) {
+        alert('You went hunting and found a deer!')
+		deerSkin++
+	} else if (diceRoll < 1.2) {
+		if(Math.random < 0.5){
+			logs += 5
+			alert('You went out and found some logs!')
+		}else{
+			stone += 5
+			alert('You went out and found some stone!')
+		}
+	} else  {
+		alert('You went hunting and found nothing')
 	}
+	changeInventory()
 })
 
 $('#fishing').click(function () {
@@ -3422,3 +3358,5 @@ function saveAuto() {
 //         menu = switchMenu('main')
 //     }
 // }
+
+
