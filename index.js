@@ -2989,12 +2989,7 @@ function changeMarket() {
 		$('#dungeon').css('display', 'none')
 	}
 
-	//chop time
-    if (chopTime <=0) {
-        $("#chop").prop("disabled",false)
-      } else {
-        $("#chop").prop("disabled",true)
-      }
+
 
     if(pickaxes == 0){
         $("#mineStone").css("display", "none")
@@ -3021,6 +3016,19 @@ if (SawMill == 0){
 	}
 
 }
+
+
+	//chop time
+	setInterval (function(){
+		if (chopTime <=0) {
+			$("#chop").prop("disabled",false)
+		  } else {
+			$("#chop").prop("disabled",true)
+		  }
+	}, 1500)
+
+
+
 //menu swapper
 function switchMenu(menu) {
 	$('.menus').children().css('display', 'none')
