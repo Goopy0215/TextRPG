@@ -2172,26 +2172,21 @@ $('#doorKey').click(function () {
 		let diceRoll = Math.random() * 6
 		if (diceRoll < 1) {
 			alert('You open the door and find an empty room.')
-			RandomRoom()
 		} else if (diceRoll < 2) {
 			alert('You open the door and find a relic!')
 			relic++
-			RandomRoom()
 		} else if (diceRoll < 3) {
 			alert('You open the door and find a troll!')
 			menu = switchMenu('dungeon3')
 		} else if (diceRoll < 4) {
 			alert('You open the door and its a trap!')
 			health -= 60
-			RandomRoom()
 		} else if (diceRoll < 5) {
 			alert('You open the door and find a relic!')
 			relic++
-			RandomRoom()
 		} else if (diceRoll < 6) {
 			alert('You open the door and find 10000 gold!')
 			money += 10000
-			RandomRoom()
 		}
 		key--
 	} else {
@@ -2205,11 +2200,10 @@ $('#doorKey').click(function () {
 $('#moveRoom4').click(function () {
 	let diceRoll = Math.random() * 3
 	if (diceRoll < 1) {
-		alert('You moved past the door into the next room.')
-		menu = switchMenu('dungeon4')
-		alert('You enter the next room and theres an empty doorway in the middle of it.')
+		alert('You move past the door into the next room.')
+		RandomRoom()
 	} else if (diceRoll < 2) {
-		alert('You moved past the door into the next room.')
+		alert('You move past the door into the next room.')
 		if (Math.random() < 0.5) {
 			menu = switchMenu('dungeon1')
 		} else {
@@ -2217,9 +2211,8 @@ $('#moveRoom4').click(function () {
 		}
 		alert('You enter the next room and theres two ways to go.')
 	} else if (diceRoll < 3) {
-		alert('You moved past the door into the next room.')
-		menu = switchMenu('dungeon3')
-		alert('You enter the next room and theres a troll waiting for you!')
+		alert('You move past the door into the next room.')
+		RandomRoom2()
 	}
 })
 
