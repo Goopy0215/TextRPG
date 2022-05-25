@@ -1547,6 +1547,75 @@ $('#banditFlee').click(function () {
 	changeMarket()
 })
 
+$('#travelHelp').click(function () {
+		let diceRoll = Math.random() * 3
+		if (diceRoll < 1) {
+			if(money >= 250){
+				alert('You gave the travelers some gold.')
+				money -= 250
+				let diceRoll = Math.random()
+				if(diceRoll < 0.1){
+					alert('The travelers gave you a gift for helping them out.')
+					relic += 1
+				}else if(diceRoll < 0.2){
+					alert('The travelers gave you a gift for helping them out.')
+					key += 1
+					alert('The key they gave you is very mysterious looking.')
+				}else if(diceRoll < 0.5){
+					alert('The travelers gave you a gift for helping them out.')
+					ruby += 1
+				}else{
+					alert('The travelers thank you for helping them and you go on your way')
+				}
+			}else{
+				alert('You offer to help but dont have enough to give.')
+			}
+		} else if (diceRoll < 2) {
+			if(logs >= 200){
+				alert('You gave the travelers some logs.')
+				money -= 200
+				let diceRoll = Math.random()
+				if(diceRoll < 0.1){
+					alert('The travelers gave you a gift for helping them out.')
+					relic += 1
+				}else if(diceRoll < 0.2){
+					alert('The travelers gave you a gift for helping them out.')
+					key += 1
+					alert('The key they gave you is very mysterious looking.')
+				}else if(diceRoll < 0.5){
+					alert('The travelers gave you a gift for helping them out.')
+					ruby += 1
+				}else{
+					alert('The travelers thank you for helping them and you go on your way')
+				}
+			}else{
+				alert('You offer to help but dont have enough to give.')
+			}
+		} else if (diceRoll < 3) {
+			if(stone >= 125){
+				alert('You gave the travelers some stone.')
+				stone -= 125
+				let diceRoll = Math.random()
+				if(diceRoll < 0.1){
+					alert('The travelers gave you a gift for helping them out.')
+					relic += 1
+				}else if(diceRoll < 0.2){
+					alert('The travelers gave you a gift for helping them out.')
+					key += 1
+					alert('The key they gave you is very mysterious looking.')
+				}else if(diceRoll < 0.4){
+					alert('The travelers gave you a gift for helping them out.')
+					ruby += 1
+				}else{
+					alert('The travelers thank you for helping them and you go on your way')
+				}
+			}else{
+				alert('You offer to help but dont have enough to give.')
+			}
+		}
+	menu = switchMenu('main')
+})
+
 
 //other stuff
 $('#visit2').click(function () {

@@ -171,7 +171,11 @@
     display: none;
 }
 
-.rooms, .Room1, .Room2, .Room3, .Room4, .Room5, .Room6, .Room7, .Room8, .bearEncounter, .wolfEncounter, .robEncounter{
+.encounter4 {
+    display: none;
+}
+
+.rooms, .Room1, .Room2, .Room3, .Room4, .Room5, .Room6, .Room7, .Room8, .bearEncounter, .wolfEncounter, .robEncounter, .travelEncounter{
     display: grid;
     grid-template-columns: auto;
     position: fixed;
