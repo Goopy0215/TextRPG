@@ -1236,7 +1236,8 @@ $('#visit3').click(function () {
 		alert('You went hunting and were attacked by dogs!')
 		menu = switchMenu('encounter2')
 	} else if (diceRoll < 0.50) {
-		if (Math.random < 0.5){
+		let diceRoll = Math.random()
+		 if(diceRoll > 0.5){
 			alert('You ran into a group of travelers while hunting!')
 			menu = switchMenu('encounter4')
 		}else{
