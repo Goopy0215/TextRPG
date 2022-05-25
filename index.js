@@ -1317,45 +1317,27 @@ $('#visit3').click(function () {
 })
 
 $('#fishing').click(function () {
-	let diceRoll = Math.random() * 12
-
+	let diceRoll = Math.random()
 	if (rod == 0) {
 		alert("You don't have a Fishing Rod to go Fishing.")
-	} else if (diceRoll < 1) {
-		alert('You went fishing and caught a Bass!')
-		Bass++
-	} else if (diceRoll < 2) {
-		alert('You went fishing and found a Bass!.')
-		Bass++
-	} else if (diceRoll < 3) {
-		carp++
-		alert('You went fishing and found a Carp.')
-	} else if (diceRoll < 4) {
-		health -= 10
-		alert('You went fishing and tripped')
-	} else if (diceRoll < 5) {
-		alert('You went fishing and found a Carp.')
-		carp++
-	} else if (diceRoll < 6) {
-		alert('You went fishing and found nothing.')
-	} else if (diceRoll < 7) {
-		alert('You went fishing and caught a Bass!')
-		Bass++
-	} else if (diceRoll < 8) {
-		alert('You went fishing and found nothing.')
-	} else if (diceRoll < 9) {
-		alert('You went fishing and found a CatFish!')
-		CatFish++
-	} else if (diceRoll < 10) {
-		health -= 10
-		alert('You went fishing and tripped')
-	} else if (diceRoll < 11) {
-		alert('You went fishing and found a CatFish!')
-		CatFish++
-	} else if (diceRoll < 12) {
-		alert('You went fishing and found a Largemouth Bass!')
+	} else if (diceRoll < 0.15) {
+		alert('You went fishing and caught a Largemouth Bass!')
 		largeMB++
-	}
+	} else if (diceRoll < 0.35) {
+		alert('You went fishing and found a CatFish!.')
+		CatFish++
+	} else if (diceRoll < 0.70) {
+		Bass++
+		alert('You went fishing and found a Bass.')
+	} else if (diceRoll < 0.75) {
+		menu = switchMenu('encounter4')
+		alert('You went fishing and ran into a group of travelers')
+	} else if (diceRoll < 0.95) {
+		alert('You went fishing and found a Carp.')
+		carp++
+	} else {
+		alert('You went fishing and found nothing.')
+	} 
 	changeInventory()
 })
 
@@ -1615,6 +1597,43 @@ $('#travelHelp').click(function () {
 		}
 	menu = switchMenu('main')
 })
+
+$('#travelRob').click(function () {
+	if (gun >= 1) {
+		alert('You robbed the travelers with your gun!')
+		let diceRoll = Math.random()		
+	   if(diceRoll < 0.3) {
+			alert('You found some gold in their pockets.')
+			money += 100
+	}else if(diceRoll < 0.6){
+		alert('You check their pockets and find nothing.')
+	}else{
+		alert('You found some logs in their wagon')
+		logs += 150
+	}	
+	} else {
+		let diceRoll = Math.random()
+		if (diceRoll < 0.25) {
+			alert('You beat the travelers up and rob them.')
+			health -= 15
+			money += 100
+		} else if (diceRoll < 0.50) {
+			alert('You robbed the travelers without laying a finger on them.')
+			gold += 75
+		} else {
+			alert('You tried to rob the travelers and got beat up')
+			health -= 50
+		}
+	}
+	menu = switchMenu('main')
+})
+
+$('#travelRob').click(function () {
+	alert('You watch the travelers from a distance but pass them without saying anything')
+	menu = switchMenu('main')
+})
+
+
 
 
 //other stuff
