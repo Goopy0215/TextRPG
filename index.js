@@ -1253,8 +1253,8 @@ $('#visit3').click(function () {
 		alert('You went hunting and found nothing')
 		changeInventory()
 	} else if (diceRoll < 8) {
-		alert('You went hunting and found a deer!')
-		deerSkin++
+		alert('You ran into a group of travelers while hunting!')
+		menu = switchMenu('encounter4')
 		changeInventory()
 	} else if (diceRoll < 9) {
 		alert('You went hunting and found nothing')
