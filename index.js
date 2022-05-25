@@ -3031,10 +3031,10 @@ $('#chop').click(function () {
 	logs += logPlus
 	changeInventory()
 	changeMarket()
+	setTimeout(1500)
+chopTime -= 1
 })
 
-setTimeout(1500)
-chopTime -= 1
 
 let chopTime = 0
 let mineTime = 0
