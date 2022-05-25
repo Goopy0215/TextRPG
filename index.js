@@ -3020,13 +3020,17 @@ if (SawMill == 0){
 
 	//chop time
 	setInterval (function(){
+		btnTimer1()
+	}, 1500)
+
+
+	function btnTimer1(){
 		if (chopTime <=0) {
 			$("#chop").prop("disabled",false)
 		  } else {
 			$("#chop").prop("disabled",true)
 		  }
-	}, 1500)
-
+	}
 
 
 //menu swapper
