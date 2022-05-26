@@ -917,7 +917,7 @@ $('#autoMiner').click(function () {
 			autoStonePlus += 1
 	}
 	}else if (autoStonePlus >= 5) {
-		$('#autoChopper').css('disabled', true)
+		$('#autoMiner').css('disabled', true)
 	}
 	changeInventory()
 	changeMarket()
@@ -946,14 +946,46 @@ $('#buyPickaxe').click(function () {
 })
 
 $('#axeUpgrade').click(function () {
-	if (money < 1000) {
-		alert("You don't have enough.")
-	} else {
-		money -= 1000
-		logPlus++
-		changeInventory()
-		changeMarket()
+	if(logPlus <= 1){
+		if (money < 150) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 150
+			logPlus += 1
 	}
+	}else if(logPlus == 2){
+		if (money < 500) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 500
+			logPlus += 1
+	}
+	}else if(logPlus == 3){
+		if (money < 1000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 1000
+			logPlus += 1
+	}
+	}else if(logPlus == 4){
+		if (money < 2500) {
+			alert("You don't have enough gold.")
+		}else {
+			money -= 2500
+			logPlus += 1
+	}
+	}else if(logPlus == 5){
+		if (money < 7500) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 7500
+			logPlus += 1
+	}
+	}else if (logPlus >= 6) {
+		$('#axeUpgrade').css('disabled', true)
+	}
+	changeInventory()
+	changeMarket()
 })
 
 $('#buyGun').click(function () {
@@ -2979,6 +3011,20 @@ function changeMarket() {
 		$('#autoMiner').html('Upgrade Auto Miner lvl [5] (10000¢)')
 	}else{
 		$('#autoMiner').html('Max Auto Miner Amount')
+	}
+
+	if(logPlus <= 1){
+		$('#autoMiner').html('Upgrade Axe (150¢)')
+	}else if(logPlus == 2){
+		$('#autoMiner').html('Upgrade Axe (500¢)')
+	}else if(logPlus == 3){
+		$('#autoMiner').html('Upgrade Axe (1000¢)')
+	}else if(logPlus == 4){
+		$('#autoMiner').html('Upgrade Axe (2500¢)')
+	}else if(logPlus == 5){
+		$('#autoMiner').html('Upgrade Axe (7500¢)')
+	}else{
+		$('#autoMiner').html('Axe fully upgraded')
 	}
 
 	if (money >= pickaxePrice) {
