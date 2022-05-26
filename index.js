@@ -284,7 +284,6 @@ setInterval(function () {
 	if (health > 149) {
 		$('#buyArmor').prop("disabled",true) 
 		changeInventory()
-		changeMarket()
 	}
 }, 100)
 
@@ -293,7 +292,6 @@ setInterval(function () {
 	if (money < 0) {
 		money = 0
 		changeInventory()
-		changeMarket()
 	}
 }, 100)
 
