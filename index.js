@@ -1,4 +1,6 @@
 let health = 100
+let armor = 0
+let armorHealth = 50
 let money = 0
 let campfire = 0
 let campfirePrice = 100
@@ -86,6 +88,8 @@ let player = {}
 function updatePlayerData() {
 	player.health = health
 	player.money = money
+	player.armor = armor
+	player.armorHealth = armorHealth
 	player.campfire = campfire
 	player.campfirePrice = campfirePrice
 	player.key = key
@@ -171,6 +175,8 @@ function updatePlayerData() {
 function updateGameData() {
     health = player.health
     money = player.money
+	armor = player.armor
+	armorHealth = player.armorHealth
     campfire = player.campfire
     campfirePrice = player.campfirePrice
     key = player.key
@@ -260,9 +266,25 @@ function updateGameData() {
 
 //health function
 setInterval(function () {
-	if (health > 100) {
-		health = 100
+	if(armor = 1){
+		if (health > 150) {
+			health = 150
+			changeInventory()
+		}
+	}else{
+		if (health > 100) {
+			health = 100
+			changeInventory()
+		}
+	}
+}, 100)
+
+//health function
+setInterval(function () {
+	if (Health = 150) {
+		$('#buyArmor').prop("disabled",true) 
 		changeInventory()
+		changeMarket()
 	}
 }, 100)
 
@@ -1031,6 +1053,18 @@ $('#buyPickaxe').click(function () {
 	}
 })
 
+$('#buyArmor').click(function () {
+	if (money < 1500) {
+		alert("You don't have enough gold.")
+	} else {
+		armor += 1
+		money -= 1500
+		health += 50
+		changeInventory()
+		changeMarket()
+	}
+})
+
 $('#axeUpgrade').click(function () {
 	if(logPlus <= 1){
 		if (money < 150) {
@@ -1641,14 +1675,18 @@ $('#banditFlee').click(function () {
 			health -= 0
 	} else if (Math.random() < 0.5) {
 			alert('The bandits caught up and took some of your gold and roughed you up.')
-			health -= 25
+				health -= 25	
             money -= money * 0.5
 	} else {
         if(shields >= 1){
             alert('The bandits hit your shield with an arrow but you got away.')
         }else{
             alert('The bandits hit you with an arrow but you got away.')
-			health -= 50
+			if(armor = 1){
+				armorHealth -= 50
+			}else{
+				health -= 50	
+			}
         }
 	}
 	menu = switchMenu('main')
@@ -1749,7 +1787,7 @@ $('#travelRob').click(function () {
 			gold += 75
 		} else {
 			alert('You tried to rob the travelers and got beat up')
-			health -= 50
+				health -= 50
 		}
 	}
 	menu = switchMenu('main')
