@@ -273,13 +273,7 @@ setInterval(function () {
 }, 100)
 
 //health function
-setInterval(function () {
-	if (armor = 1) {
-		health = 150
-		$('#buyArmor').prop("disabled",true) 
-		changeInventory()
-	}
-}, 100)
+
 
 //money function
 setInterval(function () {
