@@ -1266,7 +1266,7 @@ $('#AutoSaw').click(function () {
 $('#Drink').click(function () {
 	if (money <= drinkPrice) {
 		alert('You dont have enough gold.')
-	} else if (health == 100) {
+	} else if (health >= 100) {
 		alert('You are too full.')
 	} else if (money >= drinkPrice) {
 		alert('You had a drink!')
@@ -1280,7 +1280,7 @@ $('#Drink').click(function () {
 $('#lean').click(function () {
 	if (money <= drinkPrice) {
 		alert('You dont have enough gold.')
-	} else if (health == 100) {
+	} else if (health >= 100) {
 		alert('You are too full.')
 	} else if (money >= drinkPrice) {
 		alert('You sipped some lean!')
@@ -1294,7 +1294,7 @@ $('#lean').click(function () {
 $('#Eat').click(function () {
 	if (money <= steakPrice) {
 		alert('You dont have enough gold.')
-	} else if (health == 100) {
+	} else if (health >= 100) {
 		alert('You are too full.')
 	} else if (money >= steakPrice) {
 		alert('You ate a steak!')
@@ -1308,7 +1308,7 @@ $('#Eat').click(function () {
 $('#bean').click(function () {
 	if (money <= steakPrice) {
 		alert('You dont have enough gold.')
-	} else if (health == 100) {
+	} else if (health >= 100) {
 		alert('You are too full.')
 	} else if (money >= steakPrice) {
 		alert('You popped a bean!')
