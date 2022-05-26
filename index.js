@@ -308,11 +308,7 @@ setInterval(function () {
 
 //function for automining2.0
 setInterval(function () {
-	if (Math.random < 0.5){
 		ruby += autoRubyPlus
-	}else{
-		ruby += 0
-	}
 	changeInventory()
 	changeMarket()
 }, 10000)
