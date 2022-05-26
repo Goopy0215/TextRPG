@@ -273,6 +273,7 @@ setInterval(function () {
 		if (health > 100)
 			health = 100
 			changeInventory()
+			armorHealth()
 		}
 }, 100)
 
