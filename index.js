@@ -1403,7 +1403,7 @@ $('#gambling').click(function () {
 })
 
 $('#upgradeBtn').click(function () {
-	menu = switchMenu('upgrades')
+	menu = switchMenu('upgradeMarket')
 
 	changeMarket()
 })
