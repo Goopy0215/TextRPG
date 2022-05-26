@@ -46,6 +46,7 @@ let rod = 0
 let rodPrice = 500
 let shield = 0
 let shieldPrice = 200
+let axeUpgradeP = 1000
 let logPlus = 1
 let stonePlus = 1
 let RefinedWoodPlus = 1
@@ -128,6 +129,7 @@ function updatePlayerData() {
 	player.rodPrice = rodPrice
 	player.shield = shield
 	player.shieldPrice = shieldPrice
+	player.axeUpgradeP = axeUpgradeP
 	player.logPlus = logPlus
 	player.stonePlus = stonePlus
 	player.RefinedWoodPlus = RefinedWoodPlus
@@ -212,6 +214,7 @@ function updateGameData() {
     rodPrice = player.rodPrice
     shield = player.shield
     shieldPrice = player.shieldPrice
+	axeUpgradeP = player.axeUpgradeP
     logPlus = player.logPlus
     stonePlus = player.stonePlus
     RefinedWoodPlus = player.RefinedWoodPlus
@@ -937,6 +940,17 @@ $('#buyPickaxe').click(function () {
 	} else {
 		money -= pickaxePrice
 		pickaxes++
+		changeInventory()
+		changeMarket()
+	}
+})
+
+$('#axeUpgrade').click(function () {
+	if (money < axeUpgradeP) {
+		alert("You don't have enough.")
+	} else {
+		money -= axeUpgradeP
+		logPlus++
 		changeInventory()
 		changeMarket()
 	}
