@@ -263,21 +263,17 @@ function updateGameData() {
 
 //health function
 setInterval(function () {
-		if (health > 100) {
-			health = 100
-			changeInventory()
-		}
-}, 100)
-
-//health function
-setInterval(function(){
-	if(armor > 0){
+	if(armor == 1){
 		if (health > 150) {
 			health = 150
 			changeInventory()
 			armorHealth()
 		}
-	}
+	}else{
+		if (health > 100)
+			health = 100
+			changeInventory()
+		}
 }, 100)
 
 //money function
