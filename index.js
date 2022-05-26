@@ -273,7 +273,15 @@ setInterval(function () {
 }, 100)
 
 //health function
-
+setInterval(function(){
+	if(armor = 1){
+		if (health > 150) {
+			health = 150
+			changeInventory()
+			armorHealth()
+		}
+	}
+}, 100)
 
 //money function
 setInterval(function () {
@@ -1668,11 +1676,7 @@ $('#banditFlee').click(function () {
             alert('The bandits hit your shield with an arrow but you got away.')
         }else{
             alert('The bandits hit you with an arrow but you got away.')
-			if(armor = 1){
-				armorHealth -= 50
-			}else{
 				health -= 50	
-			}
         }
 	}
 	menu = switchMenu('main')
@@ -3305,8 +3309,17 @@ if(armor = 1){
 }else{
 	$('#buyArmor').prop("disabled",false)
 }
+
 }
 
+function armorHealth(){
+	if(armor = 1){
+		if(health = 100){
+			armor -= 1
+
+		}
+	}
+}
 
 //menu swapper
 function switchMenu(menu) {
