@@ -14,6 +14,7 @@ let diamondPrice = 250
 let ruby = 0
 let rubyPrice = 200
 let coal = 0
+let coalPlus = 1
 let coalPrice = 25
 let logs = 0
 let stone = 0
@@ -1016,6 +1017,7 @@ $('#pickaxeUpgrade').click(function () {
 		}else {
 			money -= 5000
 			stonePlus += 1
+			coalPlus += 1
 	}
 	}else if(stonePlus == 5){
 		if (money < 10000) {
@@ -1023,6 +1025,7 @@ $('#pickaxeUpgrade').click(function () {
 		} else {
 			money -= 10000
 			stonePlus += 1
+			coalPlus += 1
 	}
 	}else if (stonePlus >= 6) {
 		$('#axeUpgrade').css('disabled', true)
@@ -3392,7 +3395,7 @@ function mineFind() {
 		mineTime++
 	}else if(diceRoll < 0.20){
 		alert('You went mining and found coal!')
-		coal++
+		coal += coalPlus
 		mineTime++
 	}
 	else if (diceRoll < 0.30) {
