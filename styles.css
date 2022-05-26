@@ -78,9 +78,8 @@
     width: 400px;
 }
 
-.upgradeMarket{
+.upgrades{
     display: none;
-    position: fixed;top: 0px; right: 1340px;
     margin-bottom: 10px;
 }
 
@@ -215,7 +214,7 @@
     line-height: 50%;
 }
 
-.returnButton {
+.returnButton{
     position: fixed; top: 475px; left: 0px;
     display: block;
 }

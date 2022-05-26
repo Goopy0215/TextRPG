@@ -1403,7 +1403,7 @@ $('#gambling').click(function () {
 })
 
 $('#upgradeBtn').click(function () {
-	menu = switchMenu('upgradeMarket')
+	menu = switchMenu('upgrades')
 
 	changeMarket()
 })
@@ -3352,6 +3352,10 @@ $('#return5').click(function () {
 
 $('#return6').click(function () {
 	menu = switchMenu('main')
+})
+
+$('#return7').click(function () {
+	menu = switchMenu('marketPlace')
 })
 
 function clearTavern() {}
