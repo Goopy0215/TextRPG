@@ -266,17 +266,16 @@ function updateGameData() {
 
 //health function
 setInterval(function () {
-
 		if (health > 100) {
 			health = 100
 			changeInventory()
 		}
-	
 }, 100)
 
 //health function
 setInterval(function () {
-	if (health = 150) {
+	if (armor = 1) {
+		health = 150
 		$('#buyArmor').prop("disabled",true) 
 		changeInventory()
 	}
@@ -3307,6 +3306,11 @@ if (SawMill == 0){
 		$('#sawMill').prop('disabled', true)
 	}
 
+if(shield = 1){
+	$('#buyArmor').prop("disabled",true)
+}else{
+	$('#buyArmor').prop("disabled",false)
+}
 }
 
 
@@ -3627,5 +3631,3 @@ function saveAuto() {
 //         menu = switchMenu('main')
 //     }
 // }
-
-
