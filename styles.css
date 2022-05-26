@@ -77,14 +77,11 @@
 .bar-tender {
     width: 400px;
 }
-.upgrades, .items button{
-    display: grid;
-    position: fixed;top: 0px; right: 1340px;
-    margin-bottom: 10px;
-}
 
 .upgradeMarket{
     display: none;
+    position: fixed;top: 0px; right: 1340px;
+    margin-bottom: 10px;
 }
 
 .fishMarket {
