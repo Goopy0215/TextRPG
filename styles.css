@@ -95,7 +95,7 @@
 }
 
 .sellButtons2{
-    position: fixed; top: 0px; right: 1450px;
+    position: fixed; top: 0px; right: 1390px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
@@ -109,7 +109,7 @@
 }
 
 .sellButtons4{
-    position: fixed; top: 0px; right: 1000px;
+    position: fixed; top: 0px; right: 1090px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
