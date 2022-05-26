@@ -263,7 +263,7 @@ function updateGameData() {
 
 //health function
 setInterval(function () {
-	if(armor == 1){
+	if(armor >= 1){
 		if (health > 150) {
 			health = 150
 			changeInventory()
