@@ -3014,17 +3014,17 @@ function changeMarket() {
 	}
 
 	if(logPlus <= 1){
-		$('#autoMiner').html('Upgrade Axe (150¢)')
+		$('#axeUpgrade').html('Upgrade Axe (150¢)')
 	}else if(logPlus == 2){
-		$('#autoMiner').html('Upgrade Axe (500¢)')
+		$('#axeUpgrade').html('Upgrade Axe (500¢)')
 	}else if(logPlus == 3){
-		$('#autoMiner').html('Upgrade Axe (1000¢)')
+		$('#axeUpgrade').html('Upgrade Axe (1000¢)')
 	}else if(logPlus == 4){
-		$('#autoMiner').html('Upgrade Axe (2500¢)')
+		$('#axeUpgrade').html('Upgrade Axe (2500¢)')
 	}else if(logPlus == 5){
-		$('#autoMiner').html('Upgrade Axe (7500¢)')
+		$('#axeUpgrade').html('Upgrade Axe (7500¢)')
 	}else{
-		$('#autoMiner').html('Axe fully upgraded')
+		$('#axeUpgrade').html('Axe fully upgraded')
 	}
 
 	if (money >= 100) {
