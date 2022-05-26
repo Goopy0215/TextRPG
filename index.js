@@ -3287,9 +3287,9 @@ function changeMarket() {
     }
 
 if (SawMill == 0){
-    $('sawMill').css('display', 'none')
+    $('#sawMill').css('display', 'none')
     }else{
-        $('sawMill').css('display', 'block')
+        $('#sawMill').css('display', 'block')
     }
 
  if (sawTime <= 0) {
@@ -3298,11 +3298,11 @@ if (SawMill == 0){
 		$('#sawMill').prop('disabled', true)
 	}
 
-if(armor <= 0){
-	$('#buyArmor').prop("disabled",false)
-}else{
-	$('#buyArmor').prop("disabled",true)
-}
+	if (armor > 0){
+		$('#buyArmor').css('display', 'none')
+		}else{
+			$('#buyArmor').css('display', 'block')
+		}
 
 }
 
