@@ -281,7 +281,7 @@ setInterval(function () {
 
 //health function
 setInterval(function () {
-	if (health > 149) {
+	if (health = 150) {
 		$('#buyArmor').prop("disabled",true) 
 		changeInventory()
 	}
