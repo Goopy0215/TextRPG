@@ -1605,7 +1605,7 @@ $('#banditFight').click(function () {
 			alert('You fought the bandits and killed them with your sword!')
 			if (Math.random() < 0.5) {
 				alert('You found some gold in their pockets.')
-				money += 100
+				money += money * 0.2
 			} else {
 				alert('You check their pockets and find nothing')
 			}
