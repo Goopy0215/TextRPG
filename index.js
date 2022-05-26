@@ -3312,7 +3312,7 @@ if (SawMill == 0){
 
 function armorHealth(){
 	if(armor >= 1){
-		if(health > 101){
+		if(health < 101){
 			armor -= 1
 		}
 	}
