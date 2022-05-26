@@ -3298,10 +3298,10 @@ if (SawMill == 0){
 		$('#sawMill').prop('disabled', true)
 	}
 
-if(armor > 0){
-	$('#buyArmor').prop("disabled",true)
-}else{
+if(armor <= 0){
 	$('#buyArmor').prop("disabled",false)
+}else{
+	$('#buyArmor').prop("disabled",true)
 }
 
 }
