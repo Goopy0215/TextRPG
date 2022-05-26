@@ -3027,7 +3027,7 @@ function changeMarket() {
 		$('#autoMiner').html('Axe fully upgraded')
 	}
 
-	if (money >= pickaxePrice) {
+	if (money >= 100) {
 		$('#buyPickaxe').css('display', 'block')
 	} else {
 		$('#buyPickaxe').css('display', 'none')
