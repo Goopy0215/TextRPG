@@ -282,6 +282,7 @@ setInterval(function () {
 	if (money < 0) {
 		money = 0
 		changeInventory()
+		armorHealth()
 	}
 }, 100)
 
@@ -3310,7 +3311,6 @@ function armorHealth(){
 	if(armor >= 1){
 		if(health > 101){
 			armor -= 1
-
 		}
 	}
 }
