@@ -2802,18 +2802,15 @@ function changeInventory() {
 		$('#cook10LMB').css('display', 'none')
 	}
 
-	if (logs >= campfirePrice) {
-		$('#campFire').css('display', 'block')
-	} else {
-		$('#campFire').css('display', 'none')
-	}
-
 	if (campfire >= 1) {
 		$('#campfire1').css('display', 'block')
 	} else {
 		$('#campfire1').css('display', 'none')
 	}
 }
+
+
+
 //market updater
 function changeMarket() {
 	//wood
@@ -3264,6 +3261,11 @@ function changeMarket() {
 		$('#campFire').css('display', 'block')
 	}
 
+	if (logs >= campfirePrice) {
+		$('#campFire').css('display', 'block')
+	} else {
+		$('#campFire').css('display', 'none')
+	}
 
 
     if(SawMill > 0){
