@@ -1402,6 +1402,12 @@ $('#gambling').click(function () {
 	changeMarket()
 })
 
+$('#upgradeBtn').click(function () {
+	menu = switchMenu('upgrades')
+
+	changeMarket()
+})
+
 $('#visit3').click(function () {
 	let diceRoll = Math.random() * 3
 	if (gun == 0) {
