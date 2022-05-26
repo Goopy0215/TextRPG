@@ -936,7 +936,7 @@ $('#campFire').click(function () {
 
 $('#buyPickaxe').click(function () {
 	if (money < pickaxePrice) {
-		alert("You don't have enough.")
+		alert("You don't have enough gold.")
 	} else {
 		money -= pickaxePrice
 		pickaxes++
@@ -988,9 +988,52 @@ $('#axeUpgrade').click(function () {
 	changeMarket()
 })
 
+$('#pickaxeUpgrade').click(function () {
+	if(stonePlus <= 1){
+		if (money < 300) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 300
+			stonePlus += 1
+	}
+	}else if(stonePlus == 2){
+		if (money < 1000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 1000
+			stonePlus += 1
+	}
+	}else if(stonePlus == 3){
+		if (money < 2500) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 2500
+			stonePlus += 1
+	}
+	}else if(stonePlus == 4){
+		if (money < 5000) {
+			alert("You don't have enough gold.")
+		}else {
+			money -= 5000
+			stonePlus += 1
+	}
+	}else if(stonePlus == 5){
+		if (money < 10000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 10000
+			stonePlus += 1
+	}
+	}else if (stonePlus >= 6) {
+		$('#axeUpgrade').css('disabled', true)
+	}
+	changeInventory()
+	changeMarket()
+})
+
 $('#buyGun').click(function () {
 	if (money < gunPrice) {
-		alert("You don't have enough.")
+		alert("You don't have enough gold.")
 	} else {
 		money -= gunPrice
 		gun++
@@ -1001,7 +1044,7 @@ $('#buyGun').click(function () {
 
 $('#buyRod').click(function () {
 	if (money < rodPrice) {
-		alert("You don't have enough.")
+		alert("You don't have enough gold.")
 	} else {
 		money -= rodPrice
 		rod++
@@ -1012,7 +1055,7 @@ $('#buyRod').click(function () {
 
 $('#buyShield').click(function () {
 	if (money < shieldPrice) {
-		alert("You don't have enough.")
+		alert("You don't have enough gold.")
 	} else {
 		money -= shieldPrice
 		shield++
@@ -1023,7 +1066,7 @@ $('#buyShield').click(function () {
 
 $('#buyCoal').click(function () {
 	if (money < 25) {
-		alert("You don't have enough.")
+		alert("You don't have enough gold.")
 	} else {
 		money -= 25
 		coal++
@@ -1034,7 +1077,7 @@ $('#buyCoal').click(function () {
 
 $('#buyCoal10').click(function () {
 	if (money < 250) {
-		alert("You don't have enough.")
+		alert("You don't have enough gold.")
 	} else {
 		money -= 250
 		coal += 10
@@ -3027,6 +3070,20 @@ function changeMarket() {
 		$('#axeUpgrade').html('Axe fully upgraded')
 	}
 
+	if(stonePlus <= 1){
+		$('#pickaxeUpgrade').html('Upgrade Pickaxe (300¢)')
+	}else if(stonePlus == 2){
+		$('#pickaxeUpgrade').html('Upgrade Pickaxe (1000¢)')
+	}else if(stonePlus == 3){
+		$('#pickaxeUpgrade').html('Upgrade Pickaxe (2000¢)')
+	}else if(stonePlus == 4){
+		$('#pickaxeUpgrade').html('Upgrade Pickaxe (5000¢)')
+	}else if(stonePlus == 5){
+		$('#pickaxeUpgrade').html('Upgrade Pickaxe (10000¢)')
+	}else{
+		$('#pickaxeUpgrade').html('Pickaxe fully upgraded')
+	}
+
 	if (money >= 100) {
 		$('#buyPickaxe').css('display', 'block')
 	} else {
@@ -3342,10 +3399,11 @@ function mineFind() {
 		alert('You went mining and found nothing')
 		mineTime++
 	}else{
-		stone++
+		stone += stonePlus
 		mineTime++
 	}
 }
+
 let dungKnow = 0
 //dialogue
 $('#dialogue').click(function () {
