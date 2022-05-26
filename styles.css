@@ -95,21 +95,21 @@
 }
 
 .sellButtons2{
-    position: fixed; top: 0px; right: 1380px;
+    position: fixed; top: 0px; right: 1385px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
 }
 
 .sellButtons3{
-    position: fixed; top: 0px; right: 790px;
+    position: fixed; top: 0px; right: 780px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
 }
 
 .sellButtons4{
-    position: fixed; top: 0px; right: 1030px;
+    position: fixed; top: 0px; right: 1020px;
     display: grid;
     margin-bottom: 10px;
     width: fit-content;
