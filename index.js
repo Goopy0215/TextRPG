@@ -13,6 +13,7 @@ let diamond = 0
 let diamondPrice = 250
 let ruby = 0
 let rubyPrice = 200
+let autoRubyPlus = 0
 let coal = 0
 let coalPlus = 1
 let coalPrice = 25
@@ -97,6 +98,7 @@ function updatePlayerData() {
 	player.diamondPrice = diamondPrice
 	player.ruby = ruby
 	player.rubyPrice = rubyPrice
+	player.autoRubyPlus = autoRubyPlus
 	player.coal = coal
 	player.coalPrice = coalPrice
 	player.logs = logs
@@ -182,6 +184,7 @@ function updateGameData() {
     diamondPrice = player.diamondPrice
     ruby = player.ruby
     rubyPrice = player.rubyPrice
+	autoRubyPlus = player.autoRubyPlus
 	coal = player.coal
     coalPrice = player.coalPrice
     logs = player.logs
@@ -288,6 +291,13 @@ setInterval(function () {
 	changeInventory()
 	changeMarket()
 }, 2000)
+
+//function for automining2.0
+setInterval(function () {
+	ruby += autoRubyPlus
+	changeInventory()
+	changeMarket()
+}, 10000)
 
 //function for autolog
 setInterval(function () {
@@ -952,9 +962,49 @@ $('#autoMiner').click(function () {
 			money -= 10000
 			autoStonePlus += 1
 	}
-	}else if (autoStonePlus >= 5) {
-		$('#autoMiner').css('disabled', true)
-	}
+	}else if (autoStonePlus == 5) {
+		if (money < 20000) {
+			alert("You don't have enough gold.")
+		} else {
+			money -= 20000
+			autoStonePlus += 3
+	}	
+
+}else if(autoStonePlus == 8){
+	if (money < 50000) {
+		alert("You don't have enough gold.")
+	} else {
+		money -= 50000
+		autoStonePlus += 4
+		autoRubyPlus += 1
+}
+}else if(autoStonePlus == 12){
+	if (money < 100000) {
+		alert("You don't have enough gold.")
+	} else {
+		money -= 100000
+		autoStonePlus += 3
+		autoRubyPlus += 1
+}
+}else if(autoStonePlus == 15){
+	if (money < 250000) {
+		alert("You don't have enough gold.")
+	} else {
+		money -= 250000
+		autoStonePlus += 5
+		autoRubyPlus += 1
+}
+}else if(autoStonePlus == 20){
+	if (money < 500000) {
+		alert("You don't have enough gold.")
+	}else {
+		money -= 500000
+		autoStonePlus += 5
+		autoRubyPlus += 1
+}
+}else if (autoStonePlus >= 21) {
+	$('#autoMiner').css('disabled', true)
+}
 	changeInventory()
 	changeMarket()
 })
@@ -1526,18 +1576,17 @@ $('#banditFight').click(function () {
 			alert('You fought the bandits off and  almost killed them with your sword.')
 		}
 	} else {
-		let diceRoll = Math.random() * 3
-		if (diceRoll < 1) {
-			alert('You fought the bandits off and got injured.')
-			health -= 50
-			alert('You limp out of the forest with all your gold but the taste of blood in your mouth.')
-		} else if (diceRoll < 2) {
+		let diceRoll = Math.random()
+		if (diceRoll < 0.25) {
+			alert('You fought off all the bandits without a scratch')
+		} else if (diceRoll < 0.5) {
 			alert('You fought the bandits off and was gravely injured and lost some of your gold.')
-			health -= 70
+			health -= 60
 			money -= money * 0.1
 			alert('You limp out of the forest bleeding from your wounds.')
-		} else if (diceRoll < 3) {
-			alert('You fought off all the bandits without a scratch')
+		} else {
+			alert('You fought the bandits off and got injured.')
+			health -= 50
 		}
 	}
 	menu = switchMenu('main')
@@ -3100,6 +3149,16 @@ function changeMarket() {
 		$('#autoMiner').html('Upgrade Auto Miner lvl [4] (5000¢)')
 	}else if(autoStonePlus == 4){
 		$('#autoMiner').html('Upgrade Auto Miner lvl [5] (10000¢)')
+	}else if(autoStonePlus == 5){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [6] (20000¢)')
+	}else if(autoStonePlus == 8){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [7] (50000¢)')
+	}else if(autoStonePlus == 12){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [8] (100000¢)')
+	}else if(autoStonePlus == 15){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [9] (250000¢)')
+	}else if(autoStonePlus == 20){
+		$('#autoMiner').html('Upgrade Auto Miner lvl [10] (500000¢)')
 	}else{
 		$('#autoMiner').html('Max Auto Miner Amount')
 	}
