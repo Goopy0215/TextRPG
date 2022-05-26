@@ -1484,7 +1484,7 @@ $('#fishing').click(function () {
 		Bass++
 		alert('You went fishing and found a Bass.')
 	} else if (diceRoll < 1.2) {
-		if(Math.Random < 0.5){
+		if(Math.random() < 0.5){
 			alert('You ran into some travelers while fishing')
 			menu = switchMenu('encounter4')
 		}else{
