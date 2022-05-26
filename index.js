@@ -1,6 +1,5 @@
 let health = 100
 let armor = 0
-let armorHealth = 50
 let money = 0
 let campfire = 0
 let campfirePrice = 100
@@ -89,7 +88,6 @@ function updatePlayerData() {
 	player.health = health
 	player.money = money
 	player.armor = armor
-	player.armorHealth = armorHealth
 	player.campfire = campfire
 	player.campfirePrice = campfirePrice
 	player.key = key
@@ -176,7 +174,6 @@ function updateGameData() {
     health = player.health
     money = player.money
 	armor = player.armor
-	armorHealth = player.armorHealth
     campfire = player.campfire
     campfirePrice = player.campfirePrice
     key = player.key
