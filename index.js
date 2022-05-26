@@ -946,10 +946,10 @@ $('#buyPickaxe').click(function () {
 })
 
 $('#axeUpgrade').click(function () {
-	if (money < axeUpgradeP) {
+	if (money < 1000) {
 		alert("You don't have enough.")
 	} else {
-		money -= axeUpgradeP
+		money -= 1000
 		logPlus++
 		changeInventory()
 		changeMarket()
