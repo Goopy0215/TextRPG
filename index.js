@@ -2435,10 +2435,10 @@ $('#doorKey').click(function () {
 			money += 10000
 		}
 		key--
+		RandomRoom()
 	} else {
 		alert('You dont have the key to this door.')
 	}
-
 	changeInventory()
 	changeMarket()
 })
