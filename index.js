@@ -1395,25 +1395,25 @@ function gamble50() {
 $('#BarTender').click(function () {
 	let diceRoll = Math.random() * 8
 	if (diceRoll < 1) {
-		$('#tenderTalk').html('Hello travler')
+		$('#tenderTalk').html('Hello traveler')
 		leanBar()
 	} else if (diceRoll < 2) {
-		$('#tenderTalk').html('Welcome travler')
+		$('#tenderTalk').html('Welcome traveler')
 		leanBar()
 	} else if (diceRoll < 3) {
-		$('#tenderTalk').html('Hello travler')
+		$('#tenderTalk').html('Hello traveler')
 		leanBar()
 	} else if (diceRoll < 4) {
-		$('#tenderTalk').html('Welcome travler')
+		$('#tenderTalk').html('Welcome traveler')
 		leanBar()
 	} else if (diceRoll < 5) {
-		$('#tenderTalk').html('Hello travler')
+		$('#tenderTalk').html('Hello traveler')
 		leanBar()
 	} else if (diceRoll < 6) {
-		$('#tenderTalk').html('Welcome travler')
+		$('#tenderTalk').html('Welcome traveler')
 		leanBar()
 	} else if (diceRoll < 7) {
-		$('#tenderTalk').html('Hello travler')
+		$('#tenderTalk').html('Hello traveler')
 		leanBar()
 	} else if (diceRoll < 8) {
 		$('#tenderTalk').html('Waddup Bitch!')
