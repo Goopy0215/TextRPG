@@ -2511,7 +2511,9 @@ function changeInventory() {
 		$('#money').html('Gold: ' + Math.floor(money) + ' SK DID IT FIRST!!')
 	} else if (money >= 1100000) {
 		$('#money').html('Gold: ' + Math.floor(money))
-	} else {
+	} else if(money >= 1100001){
+		$('#money').html('Gold: ' + Math.floor(money))
+	}else{
 		$('#money').html('Gold: ' + Math.floor(money))
 	}
 
