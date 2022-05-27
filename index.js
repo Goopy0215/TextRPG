@@ -2222,11 +2222,13 @@ $('#fight').click(function () {
 			trollSkin++
 			RandomRoom()
 		} else if (diceRoll < 2) {
-			alert('You almost kill the troll but it got away.')
+			alert('You almost kill the troll but it got the better of you.')
+			health -= 30
 			menu = switchMenu('dungeon2')
 			alert('You enter the next room and theres two ways to go.')
 		} else if (diceRoll < 3) {
 			alert('The troll gets the better of you and breaks your sword.')
+			health -= 30
 			sword--
 			RandomRoom()
 		} else if (diceRoll < 4) {
@@ -2235,10 +2237,10 @@ $('#fight').click(function () {
 			RandomRoom()
 		} else if (diceRoll < 5) {
 			alert('You almost kill the troll but it got away.')
-			menu = switchMenu('dungeon2')
-			alert('You enter the next room and theres two ways to go.')
+			RandomRoom()
 		} else if (diceRoll < 6) {
-			alert('You almost kill the troll but it got away.')
+			alert('You almost kill the troll but it got the better of you.')
+			health -= 30
 			RandomRoom()
 		}
 	} else if (shield >= 1) {
