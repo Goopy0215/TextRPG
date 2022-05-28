@@ -1059,6 +1059,14 @@ $('#campFire').click(function () {
 	changeInventory()
 })
 
+$('#buyHouse').click(function () {
+		RefinedWood -= 1000
+		stone -= 500
+		house++
+	changeMarket()
+	changeInventory()
+})
+
 $('#buyPickaxe').click(function () {
 	if (money < pickaxePrice) {
 		alert("You don't have enough gold.")

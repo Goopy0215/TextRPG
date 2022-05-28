@@ -214,6 +214,10 @@
         position: relative;
 }
 
+.House {
+    display: none;
+}
+
 
 .inventory2 {
     position: fixed; bottom: 0; right: 1000px;
