@@ -1528,10 +1528,10 @@ $('#fishing').click(function () {
 	} else if (diceRoll < 0.50) {
 		alert('You went fishing and found a CatFish!.')
 		CatFish++
-	} else if (diceRoll < 0.90) {
+	} else if (diceRoll < 0.1) {
 		Bass++
 		alert('You went fishing and found a Bass.')
-	} else if (diceRoll < 1.2) {
+	} else if (diceRoll < 1.10) {
 		if(Math.random() < 0.5){
 			alert('You ran into some travelers while fishing')
 			menu = switchMenu('encounter4')
