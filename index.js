@@ -80,6 +80,7 @@ let bet50Price = 50
 let bet100Price = 100
 let bet1000Price = 1000
 let dogAttack = 40
+let house = 0
 let menu
 
 let player = {}
@@ -167,6 +168,7 @@ function updatePlayerData() {
 	player.dogAttack = dogAttack
 	player.campfire = campfire
 	player.dungKnow = dungKnow
+	player.house = house
 	player.menu = menu
 }
 
@@ -253,6 +255,7 @@ function updateGameData() {
     bet1000Price = player.bet1000Price
     dogAttack = player.dogAttack
 	dungKnow = player.dungKnow
+	house = player.house
     menu = player.menu
 }
 
@@ -3307,6 +3310,18 @@ function changeMarket() {
 		$('#campFire').css('display', 'none')
 	}
 
+	if (RefinedWood >= 1000) {
+		$('#houseBuy').css('display', 'block')
+	} else {
+		$('#houseBuy').css('display', 'none')
+	}
+
+	if (stone >= 500) {
+		$('#houseBuy').css('display', 'block')
+	} else {
+		$('#houseBuy').css('display', 'none')
+	}
+
 
     if(SawMill > 0){
         $('#sawMill').css('display', 'block')
@@ -3318,6 +3333,12 @@ function changeMarket() {
 		$('#dungeon').css('display', 'block')
 	} else {
 		$('#dungeon').css('display', 'none')
+	}
+
+	if (house > 0) {
+		$('#house').css('display', 'block')
+	} else {
+		$('#house').css('display', 'none')
 	}
 
 	if (chopTime <=0) {
