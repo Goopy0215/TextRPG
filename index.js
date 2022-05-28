@@ -1051,10 +1051,10 @@ $('#autoMiner').click(function () {
 $('#campFire').click(function () {
 	if(house = 0){
 		('You dont have a house yet.')
-	}
-	else if(logs < campfirePrice){
-		alert('You dont have enough logs.')
-	}else{
+	
+	}else if(logs < campfirePrice){
+		('You dont have enough logs.')
+}else{
 		logs -= campfirePrice
 		campfire++
 	}
