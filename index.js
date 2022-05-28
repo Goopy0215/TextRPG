@@ -2519,13 +2519,6 @@ $('#visit').click(function () {
 	changeMarket()
 })
 
-$('#campfire1').click(function () {
-	if (campfire <= 0) {
-		alert('You dont have a campfire built.')
-	} else menu = switchMenu('cooking')
-	changeMarket()
-	changeInventory()
-})
 
 $('#return').click(function () {
     let diceRoll = Math.random()
@@ -2850,9 +2843,9 @@ function changeInventory() {
 	}
 
 	if (campfire >= 1) {
-		$('#campfire1').css('display', 'block')
+		$('#Cooking').css('display', 'block')
 	} else {
-		$('#campfire1').css('display', 'none')
+		$('#Cooking').css('display', 'none')
 	}
 }
 
