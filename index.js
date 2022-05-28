@@ -3162,7 +3162,7 @@ function changeMarket() {
 		$('#autoChopper').css('display', 'none')
 	}
 
-	if (logs >= 250) {
+	if (logs >= SawMillCost) {
 		$('#SawMillBuy').css('display', 'block')
 	} else {
 		$('#SawMillBuy').css('display', 'none')
