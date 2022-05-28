@@ -3633,7 +3633,7 @@ function leanBar() {
 // }
 
 function mineFind() {
-	let diceRoll = Math.random()
+	let diceRoll = Math.random() * 1.25
 	if (diceRoll < 0.005) {
 		alert('You found a diamond!')
 		diamond++
