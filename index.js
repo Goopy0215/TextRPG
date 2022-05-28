@@ -15,12 +15,12 @@ let diamondPrice = 250
 let ruby = 0
 let rubyPrice = 200
 let autoRubyPlus = 0
-let coal = 0
+let coal = 11
 let coalPlus = 1
 let coalPrice = 25
 let logs = 0
-let stone = 0
-let RefinedWood = 0
+let stone = 500
+let RefinedWood = 1000
 let deerSkin = 0
 let carp = 0
 let carpPrice = 10
@@ -45,7 +45,7 @@ let pickaxes = 0
 let sword = 0
 let gun = 0
 let gunPrice = 750
-let rod = 0
+let rod = 1
 let rodPrice = 500
 let shield = 0
 let shieldPrice = 200
@@ -1059,7 +1059,7 @@ $('#campFire').click(function () {
 	changeInventory()
 })
 
-$('#buyHouse').click(function () {
+$('#houseBuy').click(function () {
 		RefinedWood -= 1000
 		stone -= 500
 		house++
@@ -1463,6 +1463,18 @@ $('#gambling').click(function () {
 
 $('#upgradeBtn').click(function () {
 	menu = switchMenu('upgrades')
+
+	changeMarket()
+})
+
+$('#house').click(function () {
+	menu = switchMenu('House')
+
+	changeMarket()
+})
+
+$('#Cooking').click(function () {
+	menu = switchMenu('campfire1')
 
 	changeMarket()
 })
@@ -3476,6 +3488,10 @@ $('#return6').click(function () {
 
 $('#return7').click(function () {
 	menu = switchMenu('marketPlace')
+})
+
+$('#return8').click(function () {
+	menu = switchMenu('House')
 })
 
 function clearTavern() {}

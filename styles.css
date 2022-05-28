@@ -236,6 +236,10 @@
 }
 
 .cooking {
+display: grid;
+}
+
+.campfire1{
     display: none;
 }
 
