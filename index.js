@@ -1049,7 +1049,10 @@ $('#autoMiner').click(function () {
 })
 
 $('#campFire').click(function () {
-	if(logs < campfirePrice){
+	if(house <= 0){
+		('You dont have a house yet.')
+	}
+	else if(logs < campfirePrice){
 		alert('You dont have enough logs.')
 	}else{
 		logs -= campfirePrice
@@ -3322,6 +3325,12 @@ function changeMarket() {
 		$('#campFire').css('display', 'none')
 	} else {
 		$('#campFire').css('display', 'block')
+	}
+
+	if (house >= 1) {
+		$('#houseBuy').css('display', 'none')
+	} else {
+		$('#houseBuy').css('display', 'block')
 	}
 
 	if (logs >= campfirePrice) {
