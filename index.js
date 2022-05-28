@@ -18,7 +18,7 @@ let autoRubyPlus = 0
 let coal = 0
 let coalPlus = 1
 let coalPrice = 25
-let logs = 0
+let logs = 99
 let stone = 0
 let RefinedWood = 0
 let deerSkin = 0
@@ -1050,10 +1050,9 @@ $('#autoMiner').click(function () {
 
 $('#campFire').click(function () {
 	if(house = 0){
-		('You dont have a house yet.')
-	
+		alert('You dont have a house yet.')	
 	}else if(logs < campfirePrice){
-		('You dont have enough logs.')
+		alert('You dont have enough logs.')
 }else{
 		logs -= campfirePrice
 		campfire++
