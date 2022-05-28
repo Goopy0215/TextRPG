@@ -3557,14 +3557,14 @@ function mineFind() {
 		alert('You went mining and hurt yourself.')
 		health -= 10
 		mineTime++
-	}else if(diceRoll < 0.20){
+	}else if(diceRoll < 0.30){
 		alert('You went mining and found coal!')
 		coal += coalPlus
 		mineTime++
 	}
-	else if (diceRoll < 0.30) {
-		alert('You went mining and found nothing')
-		mineTime++
+	else if (diceRoll < 0.35) {
+		alert('You went mining and got robbed')
+		menu = switchMenu('encounter3')
 	}else{
 		stone += stonePlus
 		mineTime++
