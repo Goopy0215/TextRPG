@@ -3606,6 +3606,7 @@ function mineFind() {
 	else if (diceRoll < 0.30) {
 		alert('You went mining and got robbed')
 		menu = switchMenu('encounter3')
+		mineTime++
 	}else{
 		stone += stonePlus
 		mineTime++
