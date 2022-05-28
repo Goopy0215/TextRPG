@@ -384,6 +384,28 @@ $('#sellallRW').click(function () {
 	changeMarket()
 })
 
+//coal
+$('#sell1C').click(function () {
+	coal--
+	money += 5
+	changeInventory()
+	changeMarket()
+})
+
+$('#sell10C').click(function () {
+	coal -= 10
+	money += 5 * 10
+	changeInventory()
+	changeMarket()
+})
+
+$('#sellallC').click(function () {
+	money += 5 * coal
+	coal = 0
+	changeInventory()
+	changeMarket()
+})
+
 //sell wolf pelts
 $('#sell1WP').click(function () {
 	wolfPelt--
@@ -2850,7 +2872,7 @@ function changeMarket() {
 	} else {
 		$('#sellallRW').css('display', 'none')
 	}
-	if (RefinedWood >= 1) {
+	if (RefinedWood > 1) {
 		$('#sell1RW').css('display', 'block')
 	} else {
 		$('#sell1RW').css('display', 'none')
@@ -2860,6 +2882,25 @@ function changeMarket() {
 	} else {
 		$('#sell10RW').css('display', 'none')
 	}
+
+
+	//refined wood
+	if (coal > 0) {
+		$('#sellallC').css('display', 'block')
+	} else {
+		$('#sellallC').css('display', 'none')
+	}
+	if (coal > 1) {
+		$('#sell1C').css('display', 'block')
+	} else {
+		$('#sell1C').css('display', 'none')
+	}
+	if (coal >= 10) {
+		$('#sell10C').css('display', 'block')
+    } else {
+	$('#sell10C').css('display', 'none')
+    }
+
 	//Wolf Pelts
 	if (wolfPelt > 0) {
 		$('#sellallWP').css('display', 'block')
@@ -3557,12 +3598,12 @@ function mineFind() {
 		alert('You went mining and hurt yourself.')
 		health -= 10
 		mineTime++
-	}else if(diceRoll < 0.30){
+	}else if(diceRoll < 0.25){
 		alert('You went mining and found coal!')
 		coal += coalPlus
 		mineTime++
 	}
-	else if (diceRoll < 0.35) {
+	else if (diceRoll < 0.30) {
 		alert('You went mining and got robbed')
 		menu = switchMenu('encounter3')
 	}else{
