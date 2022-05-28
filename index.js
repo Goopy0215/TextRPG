@@ -2835,12 +2835,12 @@ function changeInventory() {
 //market updater
 function changeMarket() {
 	//wood
-	if (logs > 0) {
+	if (logs > 1) {
 		$('#sellall').css('display', 'block')
 	} else {
 		$('#sellall').css('display', 'none')
 	}
-	if (logs > 1) {
+	if (logs >= 1) {
 		$('#sell1').css('display', 'block')
 	} else {
 		$('#sell1').css('display', 'none')
@@ -2851,12 +2851,12 @@ function changeMarket() {
 		$('#sell10').css('display', 'none')
 	}
 	//stone
-	if (stone > 0) {
+	if (stone > 1) {
 		$('#sellallStone').css('display', 'block')
 	} else {
 		$('#sellallStone').css('display', 'none')
 	}
-	if (stone > 1) {
+	if (stone >= 1) {
 		$('#sell1Stone').css('display', 'block')
 	} else {
 		$('#sell1Stone').css('display', 'none')
@@ -2867,12 +2867,12 @@ function changeMarket() {
 		$('#sell10Stone').css('display', 'none')
 	}
 	//refined wood
-	if (RefinedWood > 0) {
+	if (RefinedWood > 1) {
 		$('#sellallRW').css('display', 'block')
 	} else {
 		$('#sellallRW').css('display', 'none')
 	}
-	if (RefinedWood > 1) {
+	if (RefinedWood >= 1) {
 		$('#sell1RW').css('display', 'block')
 	} else {
 		$('#sell1RW').css('display', 'none')
@@ -2885,12 +2885,12 @@ function changeMarket() {
 
 
 	//refined wood
-	if (coal > 0) {
+	if (coal > 1) {
 		$('#sellallC').css('display', 'block')
 	} else {
 		$('#sellallC').css('display', 'none')
 	}
-	if (coal > 1) {
+	if (coal >= 1) {
 		$('#sell1C').css('display', 'block')
 	} else {
 		$('#sell1C').css('display', 'none')
