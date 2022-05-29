@@ -3325,11 +3325,6 @@ function changeMarket() {
 		$('#campFire').css('display', 'block')
 	}
 
-	if (house == 0) {
-		$('#campFire').css('display', 'none')
-	} else {
-		$('#campFire').css('display', 'block')
-	}
 
 	if (house >= 1) {
 		$('#houseBuy').css('display', 'none')
