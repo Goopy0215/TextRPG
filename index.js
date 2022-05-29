@@ -3631,23 +3631,23 @@ function leanBar() {
 
 function mineFind() {
 	let diceRoll = Math.random() * 1.25
-	if (diceRoll < 0.005) {
+	if (diceRoll < 0.01) {
 		alert('You found a diamond!')
 		diamond++
 		mineTime++
-	} else if (diceRoll < 0.01) {
+	} else if (diceRoll < 0.07) {
 		alert('You found a ruby!')
 		ruby++
 		mineTime++
-	} else if (diceRoll < 0.03) {
+	} else if (diceRoll < 0.1) {
 		alert('You went mining and hurt yourself.')
-		health -= 20
+		health -= 5
 		mineTime++
-	}else if(diceRoll < 0.10){
+	}else if(diceRoll < 0.13){
 		alert('You went mining and hurt yourself.')
 		health -= 10
 		mineTime++
-	}else if(diceRoll < 0.25){
+	}else if(diceRoll < 0.28){
 		alert('You went mining and found coal!')
 		coal += coalPlus
 		mineTime++
