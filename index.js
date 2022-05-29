@@ -1062,9 +1062,15 @@ $('#campFire').click(function () {
 })
 
 $('#houseBuy').click(function () {
+	if(RefinedWood < 1000){
+		alert('You dont have enough Refined Wood.')
+	}else if(stone < 500){
+		alert('You dont have enough Stone.')
+	}else{
 		RefinedWood -= 1000
 		stone -= 500
 		house++
+	}
 	changeMarket()
 	changeInventory()
 })
