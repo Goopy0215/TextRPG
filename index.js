@@ -1062,7 +1062,9 @@ $('#campFire').click(function () {
 })
 
 $('#houseBuy').click(function () {
-	if(RefinedWood < 1000){
+	if(house >= 1){
+		alert('You already have a House.')
+	}else if(RefinedWood < 1000){
 		alert('You dont have enough Refined Wood.')
 	}else if(stone < 500){
 		alert('You dont have enough Stone.')
