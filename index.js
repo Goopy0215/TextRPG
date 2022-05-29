@@ -3337,12 +3337,6 @@ function changeMarket() {
 		$('#houseBuy').css('display', 'block')
 	}
 
-	if (logs >= campfirePrice) {
-		$('#campFire').css('display', 'block')
-	} else {
-		$('#campFire').css('display', 'none')
-	}
-
 	if (RefinedWood >= 1000) {
 		$('#houseBuy').css('display', 'block')
 	} else {
