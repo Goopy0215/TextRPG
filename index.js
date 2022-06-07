@@ -1667,11 +1667,24 @@ $('#banditFight').click(function () {
 		} else {
 			alert('You fought the bandits off and  almost killed them with your sword.')
 		}
+	} else if(gun >= 1){
+		let diceRoll = Math.random()
+		if (diceRoll < 0.25) {
+			alert('You fought off all the bandits without a scratch')
+		} else if (diceRoll < 0.40) {
+			alert('You fought the bandits off and was gravely injured and lost your gun.')
+			health -= 60
+			gun -= 1
+			alert('You limp out of the forest bleeding from your wounds.')
+		} else {
+			alert('You fought the bandits off and got injured.')
+			health -= 25
+		}
 	} else {
 		let diceRoll = Math.random()
 		if (diceRoll < 0.25) {
 			alert('You fought off all the bandits without a scratch')
-		} else if (diceRoll < 0.5) {
+		} else if (diceRoll < 0.50) {
 			alert('You fought the bandits off and was gravely injured and lost some of your gold.')
 			health -= 60
 			money -= money * 0.1
@@ -1680,7 +1693,7 @@ $('#banditFight').click(function () {
 			alert('You fought the bandits off and got injured.')
 			health -= 50
 		}
-	}
+	}	
 	menu = switchMenu('main')
 })
 
