@@ -1543,7 +1543,7 @@ $('#fishing').click(function () {
 	} else if (diceRoll < 0.50) {
 		alert('You went fishing and found a CatFish!.')
 		CatFish++
-	} else if (diceRoll < 0.1) {
+	} else if (diceRoll < 1) {
 		Bass++
 		alert('You went fishing and found a Bass.')
 	} else if(diceRoll < 1.5) {
