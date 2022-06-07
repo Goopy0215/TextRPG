@@ -1529,7 +1529,7 @@ $('#fishing').click(function () {
 	let diceRoll = Math.random() * 2
 	if (rod == 0) {
 		alert("You don't have a Fishing Rod to go Fishing.")
-	}else if (diceRoll < 0.02) {
+	}else if (diceRoll < 0.07) {
 		if(Math.random() < 0.5){
 			alert('You ran into some travelers while fishing')
 			menu = switchMenu('encounter4')
@@ -1537,7 +1537,7 @@ $('#fishing').click(function () {
 			alert('You got robbed while fishing')
 			menu = switchMenu('encounter3')
 		}
-	}else if (diceRoll < 0.22) {
+	}else if (diceRoll < 0.25) {
 		alert('You went fishing and caught a Largemouth Bass!')
 		largeMB++
 	} else if (diceRoll < 0.50) {
