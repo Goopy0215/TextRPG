@@ -1526,10 +1526,18 @@ $('#visit3').click(function () {
 })
 
 $('#fishing').click(function () {
-	let diceRoll = Math.random() * 2.5
+	let diceRoll = Math.random() * 2
 	if (rod == 0) {
 		alert("You don't have a Fishing Rod to go Fishing.")
-	} else if (diceRoll < 0.20) {
+	}else if (diceRoll < 0.02) {
+		if(Math.random() < 0.5){
+			alert('You ran into some travelers while fishing')
+			menu = switchMenu('encounter4')
+		}else{
+			alert('You got robbed while fishing')
+			menu = switchMenu('encounter3')
+		}
+	}else if (diceRoll < 0.22) {
 		alert('You went fishing and caught a Largemouth Bass!')
 		largeMB++
 	} else if (diceRoll < 0.50) {
@@ -1538,14 +1546,6 @@ $('#fishing').click(function () {
 	} else if (diceRoll < 0.1) {
 		Bass++
 		alert('You went fishing and found a Bass.')
-	} else if (diceRoll < 0.02) {
-		if(Math.random() < 0.5){
-			alert('You ran into some travelers while fishing')
-			menu = switchMenu('encounter4')
-		}else{
-			alert('You got robbed while fishing')
-			menu = switchMenu('encounter3')
-		}
 	} else if(diceRoll < 1.5) {
 		alert('You went fishing and found a Carp.')
 		carp++
