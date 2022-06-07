@@ -1526,7 +1526,7 @@ $('#visit3').click(function () {
 })
 
 $('#fishing').click(function () {
-	let diceRoll = Math.random() * 2
+	let diceRoll = Math.random() * 2.5
 	if (rod == 0) {
 		alert("You don't have a Fishing Rod to go Fishing.")
 	} else if (diceRoll < 0.20) {
@@ -1538,7 +1538,7 @@ $('#fishing').click(function () {
 	} else if (diceRoll < 0.1) {
 		Bass++
 		alert('You went fishing and found a Bass.')
-	} else if (diceRoll < 1.10) {
+	} else if (diceRoll < 1.05) {
 		if(Math.random() < 0.5){
 			alert('You ran into some travelers while fishing')
 			menu = switchMenu('encounter4')
