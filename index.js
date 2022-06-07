@@ -1499,7 +1499,7 @@ $('#visit3').click(function () {
 	} else if (diceRoll < 0.25) {
 		alert('You went hunting and were attacked by dogs!')
 		menu = switchMenu('encounter2')
-	} else if (diceRoll < 0.50) {
+	} else if (diceRoll < 0.40) {
 		let diceRoll = Math.random()
 		 if(diceRoll < 0.5){
 			alert('You ran into a group of travelers while hunting!')
@@ -1529,7 +1529,7 @@ $('#fishing').click(function () {
 	let diceRoll = Math.random() * 2
 	if (rod == 0) {
 		alert("You don't have a Fishing Rod to go Fishing.")
-	}else if (diceRoll < 0.07) {
+	}else if (diceRoll < 0.14) {
 		if(Math.random() < 0.5){
 			alert('You ran into some travelers while fishing')
 			menu = switchMenu('encounter4')
