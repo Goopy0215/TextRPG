@@ -2571,15 +2571,15 @@ function changeInventory() {
         clearSave();
 	};
 
-	if (money >= 1000000) {
+
+	if (money < 1000000) {
+		$('#money').html('Gold: ' + Math.floor(money))
+	}else if (money <1100000) {
 		$('#money').html('Gold: ' + Math.floor(money) + ' SK DID IT FIRST!!')
-	} else if (money >= 1100000) {
-		$('#money').html('Gold: ' + Math.floor(money))
-	} else if(money >= 1100001){
-		$('#money').html('Gold: ' + Math.floor(money))
 	}else{
 		$('#money').html('Gold: ' + Math.floor(money))
 	}
+
 
 	if (logs == 1) {
 		$('#logs').html('You have ' + logs + ' log. ')
