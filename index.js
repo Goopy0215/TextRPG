@@ -1,6 +1,6 @@
 let health = 100
 let armor = 0
-let money = 0
+let money = 1099999
 let campfire = 0
 let campfirePrice = 100
 let key = 0
