@@ -1775,6 +1775,7 @@ $('#travelHelp').click(function () {
 				}else{
 					alert('The travelers thank you for helping them and you go on your way')
 				}
+				menu = switchMenu('main')
 			}else{
 				alert('You offer to help but dont have enough to give.')
 			}
@@ -1796,6 +1797,7 @@ $('#travelHelp').click(function () {
 				}else{
 					alert('The travelers thank you for helping them and you go on your way')
 				}
+				menu = switchMenu('main')
 			}else{
 				alert('You offer to help but dont have enough to give.')
 			}
@@ -1817,11 +1819,11 @@ $('#travelHelp').click(function () {
 				}else{
 					alert('The travelers thank you for helping them and you go on your way')
 				}
+				menu = switchMenu('main')
 			}else{
 				alert('You offer to help but dont have enough to give.')
 			}
 		}
-	menu = switchMenu('main')
 })
 
 $('#travelRob').click(function () {
@@ -1837,6 +1839,7 @@ $('#travelRob').click(function () {
 		alert('You found some logs in their wagon')
 		logs += 150
 	}	
+	menu = switchMenu('main')
 	} else {
 		let diceRoll = Math.random()
 		if (diceRoll < 0.25) {
@@ -1850,8 +1853,8 @@ $('#travelRob').click(function () {
 			alert('You tried to rob the travelers and got beat up')
 				health -= 50
 		}
+		menu = switchMenu('main')
 	}
-	menu = switchMenu('main')
 })
 
 $('#travelFlee').click(function () {
